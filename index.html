@@ -151,6 +151,10 @@
       font-weight: 700;
     }
 
+    .mobile-break {
+      display: none;
+    }
+
     /* ── MEDIA PLACEHOLDER ── */
     .media-frame {
       position: relative;
@@ -500,6 +504,14 @@
 
     /* ── MOBILE ── */
     @media (max-width: 600px) {
+      .mobile-break {
+        display: block;
+      }
+
+      .media-caption {
+        display: none;
+      }
+
       .wrap {
         padding-inline: 16px;
       }
@@ -646,7 +658,7 @@
       <p class="hero-subtitle">Your Door to Paid Speaking Gigs</p>
 
       <p>
-        <strong>You've got the message. You just don't have the mic yet.</strong><br>
+        <strong>You've got the message.<br class="mobile-break"> You just don't have the mic yet.</strong><br>
         One good interview builds more trust than a hundred posts, and it's how bigger stages start noticing you.
       </p>
       <a href="#register" class="cta-btn">CLAIM MY FREE SEAT</a>
