@@ -179,12 +179,22 @@
 
     .confirm-card .when {
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       gap: 10px;
       font-size: 0.9rem;
       color: var(--ink-2);
       padding-top: 14px;
       border-top: 1px solid var(--border);
+    }
+
+    .confirm-card .when-text {
+      flex: 1;
+      min-width: 0;
+      line-height: 1.5;
+    }
+
+    .confirm-card .when .dot {
+      margin-top: 6px;
     }
 
     .confirm-card .when .dot {
@@ -484,7 +494,7 @@
         <p class="event">The Path to Podcasts, Free Live Masterclass</p>
         <div class="when">
           <span class="dot"></span>
-          August 11 · 6-7PM CET · 12-1PM EST · 9-10AM PST
+          <span class="when-text">August 11 · 6-7PM CET · 12-1PM EST · 9-10AM PST</span>
         </div>
       </div>
     </div>
