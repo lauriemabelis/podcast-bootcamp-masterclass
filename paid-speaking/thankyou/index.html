@@ -14,6 +14,9 @@
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
+    /* Explicit display rules would otherwise beat the hidden attribute. */
+    [hidden] { display: none !important; }
+
     :root {
       --bg:        #000321;
       --bg-alt:    #0D1029;
@@ -389,6 +392,159 @@
     }
 
     /* ── MOBILE ── */
+
+    /* ── INLINE OFFER (Confidence to Speak) ── */
+    .lto {
+      background: var(--bg-alt);
+      border: 1px solid rgba(255, 108, 0, 0.35);
+      border-radius: 20px;
+      padding: 30px 28px;
+      text-align: center;
+      margin-bottom: 56px;
+    }
+
+    .lto .kicker {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 800;
+      letter-spacing: 0.11em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .lto .clock {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 0.82rem;
+      font-weight: 800;
+      color: #fff;
+      background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
+      border-radius: 6px;
+      padding: 2px 9px;
+      font-variant-numeric: tabular-nums;
+      letter-spacing: 0;
+    }
+
+    .lto h3 {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: clamp(1.4rem, 5vw, 1.85rem);
+      font-weight: 800;
+      line-height: 1.15;
+      margin-bottom: 12px;
+    }
+
+    .lto .pitch {
+      font-size: 0.95rem;
+      color: var(--ink-2);
+      line-height: 1.65;
+      max-width: 480px;
+      margin: 0 auto 22px;
+    }
+
+    .lto .pitch strong { color: var(--ink); font-weight: 600; }
+
+    .lto-points {
+      display: grid;
+      gap: 10px;
+      text-align: left;
+      max-width: 460px;
+      margin: 0 auto 24px;
+    }
+
+    .lto-point {
+      display: flex;
+      gap: 12px;
+      align-items: flex-start;
+      font-size: 0.9rem;
+      color: var(--ink-2);
+      line-height: 1.55;
+    }
+
+    .lto-point .tick {
+      flex-shrink: 0;
+      width: 20px;
+      height: 20px;
+      border-radius: 9999px;
+      background: rgba(255, 108, 0, 0.15);
+      border: 1px solid rgba(255, 108, 0, 0.45);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.62rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 12px;
+      margin-bottom: 6px;
+      flex-wrap: wrap;
+    }
+
+    .price-old {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1.25rem;
+      font-weight: 600;
+      color: var(--ink-2);
+      text-decoration: line-through;
+      text-decoration-color: var(--cta);
+      text-decoration-thickness: 2px;
+    }
+
+    .price-new {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: clamp(2.3rem, 10vw, 3.1rem);
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .price-note {
+      font-size: 0.84rem;
+      color: var(--ink-2);
+      margin-bottom: 22px;
+    }
+
+    .lto .btn { width: 100%; max-width: 380px; justify-content: center; }
+
+    .lto-more {
+      display: block;
+      font-size: 0.84rem;
+      color: var(--ink-2);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+      margin-top: 16px;
+    }
+
+    .lto-more:hover { color: var(--ink); }
+
+    .config-warning {
+      display: none;
+      background: rgba(255, 98, 64, 0.12);
+      border: 1px solid rgba(255, 98, 64, 0.5);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: #FFB4A0;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    .lto-expired {
+      font-size: 0.9rem;
+      color: var(--ink-2);
+      line-height: 1.6;
+    }
+
+    .lto-expired a { color: var(--accent); text-decoration: none; }
+
     @media (max-width: 600px) {
       .wrap {
         padding-inline: 16px;
@@ -511,8 +667,8 @@
   <div class="wrap">
     <div class="divider"></div>
 
-    <p class="section-label">Before we go live</p>
-    <p class="section-title">Three things to do right now</p>
+    <p class="section-label">First, lock it in</p>
+    <p class="section-title">Put it in your calendar now</p>
 
     <div class="steps">
       <div class="step">
@@ -527,6 +683,65 @@
         </div>
       </div>
 
+    </div>
+
+    <div class="lto" id="lto">
+      <p class="kicker">
+        <span>Registrant price</span>
+        <span class="clock" id="lto-clock">15:00</span>
+      </p>
+
+      <h3>Arrive ready, not just registered</h3>
+
+      <p class="pitch">
+        The masterclass shows you the path. <strong>Confidence to Speak is what stops you
+        talking yourself out of walking it.</strong> The reason most experts stay unbooked is
+        not the strategy, it is the pitch never sent and the fee never asked for.
+      </p>
+
+      <div class="lto-points">
+        <div class="lto-point">
+          <span class="tick">&#10003;</span>
+          <span>Why your body reads a stage as a threat, and what actually changes it</span>
+        </div>
+        <div class="lto-point">
+          <span class="tick">&#10003;</span>
+          <span>The Danny, Larry and Chris method for the three voices talking you out of it</span>
+        </div>
+        <div class="lto-point">
+          <span class="tick">&#10003;</span>
+          <span>Laurie's preparation framework, plus the four questions every podcast asks</span>
+        </div>
+      </div>
+
+      <div id="lto-buy">
+        <div class="price-row">
+          <span class="price-old" id="price-old">&euro;149</span>
+          <span class="price-new grad-text" id="price-new">&euro;22</span>
+        </div>
+        <p class="price-note">One payment, lifetime access, in your inbox today.</p>
+
+        <a class="btn" id="buy-btn" href="#">Yes, I want to arrive ready</a>
+
+        <a class="lto-more" href="/paid-speaking/offer/">See everything that is inside</a>
+
+        <div class="config-warning" id="config-warning">
+          <strong>Setup not finished.</strong> No checkout link is configured yet, so this
+          button is deliberately inert. Set CHECKOUT_URL in the script at the bottom of this
+          file before sending anyone here.
+        </div>
+      </div>
+
+      <p class="lto-expired" id="lto-expired" hidden>
+        The registrant price has expired. Confidence to Speak is still available at its normal
+        price of &euro;149, and your seat for the masterclass is safe either way.
+      </p>
+    </div>
+
+    <p class="section-label">Then, two more things</p>
+    <p class="section-title">Make it count</p>
+
+    <div class="steps">
       <div class="step">
         <div class="step-num">02</div>
         <div class="step-body">
@@ -561,6 +776,82 @@
       </p>
     </div>
   </footer>
+
+  <script>
+    (function () {
+      /* ────────────────────────────────────────────────────────────────
+         OFFER CONFIG. The long-form version of this offer lives at
+         /paid-speaking/offer/ and has its own copy of these settings.
+         Keep the two in step.
+         ──────────────────────────────────────────────────────────────── */
+      var OFFER = {
+        CHECKOUT_URL: '',        // Stripe payment link. Empty keeps the button inert.
+        PRICE_NOW: '\u20ac22',
+        PRICE_WAS: '\u20ac149',
+        MINUTES: 15,
+        KEY: 'cts-thankyou-deadline-v1'
+      };
+      /* ──────────────────────────────────────────────────────────────── */
+
+      var clock   = document.getElementById('lto-clock');
+      var buyWrap = document.getElementById('lto-buy');
+      var expired = document.getElementById('lto-expired');
+      var buyBtn  = document.getElementById('buy-btn');
+      var warning = document.getElementById('config-warning');
+
+      document.getElementById('price-new').textContent = OFFER.PRICE_NOW;
+      document.getElementById('price-old').textContent = OFFER.PRICE_WAS;
+
+      /* An unset link must never look like a working button. */
+      if (OFFER.CHECKOUT_URL) {
+        buyBtn.href = OFFER.CHECKOUT_URL;
+      } else {
+        warning.style.display = 'block';
+        buyBtn.addEventListener('click', function (e) { e.preventDefault(); });
+      }
+
+      /* Storage throws in some private windows, so every access is guarded
+         and the page stays correct if it fails. */
+      function read() {
+        try { return parseInt(localStorage.getItem(OFFER.KEY), 10) || null; }
+        catch (err) { return null; }
+      }
+
+      function write(ts) {
+        try { localStorage.setItem(OFFER.KEY, String(ts)); } catch (err) {}
+      }
+
+      if (location.search.indexOf('reset') !== -1) {
+        try { localStorage.removeItem(OFFER.KEY); } catch (err) {}
+      }
+
+      var deadline = read();
+      if (!deadline) {
+        deadline = Date.now() + OFFER.MINUTES * 60 * 1000;
+        write(deadline);
+      }
+
+      function tick() {
+        var left = deadline - Date.now();
+
+        if (left <= 0) {
+          buyWrap.hidden = true;
+          expired.hidden = false;
+          clock.textContent = '00:00';
+          return;
+        }
+
+        var total = Math.floor(left / 1000);
+        var mins  = Math.floor(total / 60);
+        var secs  = total % 60;
+        clock.textContent = (mins < 10 ? '0' : '') + mins + ':' + (secs < 10 ? '0' : '') + secs;
+
+        setTimeout(tick, 1000);
+      }
+
+      tick();
+    })();
+  </script>
 
   <script>
     (function () {
