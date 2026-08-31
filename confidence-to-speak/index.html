@@ -495,7 +495,7 @@
 
   <!--
     ONE TIME OFFER page. Sits between the registration form and the thank-you page:
-      GHL form submit  ->  /paid-speaking/offer/  ->  /paid-speaking/thankyou/
+      GHL form submit  ->  /confidence-to-speak/  ->  /special-opportunity/
 
     Everything commercial lives in the OFFER config block in the script at the
     bottom of this file. Set CHECKOUT_URL to the Stripe payment link before this
@@ -730,11 +730,11 @@
         The pre-work price has expired. Confidence to Speak is still available at its
         normal price of &euro;149, and your masterclass seat is safe either way.
       </p>
-      <a class="btn" href="/paid-speaking/thankyou/">Continue to my confirmation</a>
+      <a class="btn" href="/special-opportunity/">Continue to my confirmation</a>
     </div>
 
     <div class="skip">
-      <a href="/paid-speaking/thankyou/">No thanks, take me to my confirmation</a>
+      <a href="/special-opportunity/">No thanks, take me to my confirmation</a>
     </div>
   </div>
 
@@ -764,7 +764,7 @@
         MINUTES: 15,
 
         // Where "no thanks" and the expired state send people.
-        THANKYOU_URL: '/paid-speaking/thankyou/',
+        THANKYOU_URL: '/special-opportunity/',
 
         // Storage key. Change it to re-open the offer for everyone.
         KEY: 'cts-lto-deadline-v1'

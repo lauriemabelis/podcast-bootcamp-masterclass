@@ -1,4 +1,11 @@
-# Short alias for the paid-speaking landing page (the Tessa-feedback version).
-# 302, not 301, so the alias can be repointed later without fighting browser caches.
-/2   /paid-speaking/   302
-/2/  /paid-speaking/   302
+# The paid-speaking (Tessa feedback) version is the root of this site.
+# Everything below keeps previously shared links alive. 302 throughout, so
+# any of them can be repointed later without fighting browser caches.
+
+/2                        /                          302
+/paid-speaking            /                          302
+/paid-speaking/           /                          302
+/paid-speaking/thankyou   /special-opportunity/      302
+/paid-speaking/thankyou/  /special-opportunity/      302
+/paid-speaking/offer      /confidence-to-speak/      302
+/paid-speaking/offer/     /confidence-to-speak/      302
