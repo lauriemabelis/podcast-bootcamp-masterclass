@@ -1,0 +1,184 @@
+<meta charset="UTF-8" />
+<title>The Stage Sprint</title>
+<meta name="description" content="Book 10 low-risk stages in 30 days and become Green Room Ready." />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  :root {
+    --bg:        #000321;
+    --bg-alt:    #0D1029;
+    --ink:       #FFFFFF;
+    --ink-2:     #B7C2CC;
+    --accent:    #FF6C00;
+    --border:    rgba(255, 108, 0, 0.12);
+  }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: 'Inter', system-ui, sans-serif;
+    background: var(--bg);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
+    overflow-x: hidden;
+  }
+
+  .wrap { width: 100%; max-width: 1100px; margin-inline: auto; padding-inline: 24px; }
+
+  .kicker { font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 700; letter-spacing: 0.16em; text-transform: uppercase; color: var(--accent); margin-bottom: 10px; }
+
+  /* ── TITLE ── */
+  .title-band { text-align: center; padding: 56px 24px 40px; border-bottom: 1px solid var(--border); }
+  .offer-title { font-family: 'Sora', system-ui, sans-serif; font-size: clamp(2.2rem, 6vw, 3.4rem); font-weight: 800; letter-spacing: -0.01em; text-transform: uppercase; text-wrap: balance; }
+
+  /* ── MAIN: OUTCOME + PAYMENT ── */
+  .main-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 56px; align-items: start; padding: 56px 0; border-bottom: 1px solid var(--border); }
+  @media (max-width: 800px) { .main-grid { grid-template-columns: 1fr; gap: 36px; } }
+
+  .outcome h2 { font-family: 'Sora', system-ui, sans-serif; font-size: clamp(1.5rem, 3.4vw, 2rem); font-weight: 800; line-height: 1.25; margin-bottom: 20px; text-wrap: balance; }
+  .outcome > p { color: var(--ink-2); line-height: 1.65; margin-bottom: 24px; }
+  .outcome-mockup { display: block; width: 100%; max-width: 420px; margin: -12px auto 28px; }
+
+  .outcome-list { list-style: none; display: flex; flex-direction: column; gap: 16px; margin-bottom: 24px; }
+  .outcome-list li { display: flex; align-items: flex-start; gap: 12px; color: var(--ink-2); font-size: 1rem; line-height: 1.5; }
+  .outcome-list .check { flex-shrink: 0; width: 22px; height: 22px; border-radius: 9999px; background: rgba(255, 108, 0, 0.12); color: var(--accent); font-size: 0.75rem; font-weight: 800; display: flex; align-items: center; justify-content: center; margin-top: 1px; }
+  .outcome-list strong { color: var(--ink); font-weight: 700; }
+
+  .scale-line { font-size: 0.9rem; color: var(--ink-2); border-top: 1px solid var(--border); padding-top: 20px; }
+  .scale-line strong { color: var(--ink); font-weight: 700; }
+
+  .payment-col { position: sticky; top: 24px; }
+  .payment-frame { border: 1px solid var(--border); border-radius: 20px; background: var(--bg-alt); padding: 24px; }
+  .special-badge { display: block; text-align: center; background: rgba(255, 108, 0, 0.14); border: 1px solid var(--border); color: var(--accent); font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800; letter-spacing: 0.08em; text-transform: uppercase; padding: 7px 12px; border-radius: 9999px; margin: 0 auto 14px; width: fit-content; }
+
+  .payment-price { text-align: center; margin-bottom: 18px; }
+  .payment-price .was { text-decoration: line-through; color: var(--ink-2); font-size: 1.1rem; font-weight: 600; margin-right: 8px; }
+  .payment-price .now { font-family: 'Sora', system-ui, sans-serif; font-size: 2.2rem; font-weight: 800; color: var(--ink); }
+  .payment-price .unit { font-size: 0.85rem; font-weight: 500; color: var(--ink-2); }
+  .payment-plans { text-align: center; font-size: 0.85rem; color: var(--ink-2); margin-bottom: 20px; display: flex; flex-direction: column; gap: 4px; }
+
+  .ghl-embed-wrap { border-radius: 14px; overflow: hidden; background: #fff; }
+
+  .payment-fallback { display: block; text-align: center; margin-top: 14px; font-size: 0.85rem; color: var(--ink-2); }
+  .payment-fallback a { color: var(--accent); text-decoration: none; font-weight: 600; }
+
+  /* ── TESTIMONIALS ── */
+  .testi-section { padding: 56px 0; border-bottom: 1px solid var(--border); text-align: center; }
+  .testi-section h2 { font-family: 'Sora', system-ui, sans-serif; font-size: clamp(1.5rem, 3.4vw, 2rem); font-weight: 800; margin-bottom: 32px; }
+  .testi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  @media (max-width: 700px) { .testi-grid { grid-template-columns: 1fr; } }
+
+  .testi-card { border: 1px solid var(--border); background: var(--bg-alt); border-radius: 16px; padding: 26px 22px; text-align: center; }
+  .testi-card .result { font-family: 'Sora', system-ui, sans-serif; font-size: 1.5rem; font-weight: 800; color: var(--accent); margin-bottom: 14px; }
+  .testi-card img { width: 64px; height: 64px; border-radius: 9999px; object-fit: cover; margin-bottom: 12px; }
+  .testi-card .name { font-family: 'Sora', system-ui, sans-serif; font-weight: 700; }
+  .testi-card .role { font-size: 0.72rem; color: var(--accent); font-family: 'Montserrat', sans-serif; text-transform: uppercase; letter-spacing: 0.03em; margin-bottom: 10px; }
+  .testi-card .quote { font-size: 0.92rem; color: var(--ink); font-weight: 600; line-height: 1.5; }
+
+  /* ── FAQ ── */
+  .faq-section { padding: 56px 0 72px; }
+  .faq-section h2 { font-family: 'Sora', system-ui, sans-serif; font-size: clamp(1.5rem, 3.4vw, 2rem); font-weight: 800; margin-bottom: 24px; text-align: center; }
+  .faq-item { border-bottom: 1px solid var(--border); padding: 18px 0; }
+  .faq-item summary { cursor: pointer; font-family: 'Sora', system-ui, sans-serif; font-weight: 700; font-size: 1rem; color: var(--ink); display: flex; justify-content: space-between; align-items: center; list-style: none; }
+  .faq-item summary::-webkit-details-marker { display: none; }
+  .faq-item summary::after { content: '+'; color: var(--accent); font-size: 1.3rem; font-weight: 400; flex-shrink: 0; margin-left: 12px; }
+  .faq-item[open] summary::after { content: '\2212'; }
+  .faq-item p { margin-top: 12px; color: var(--ink-2); line-height: 1.6; }
+</style>
+
+<div class="title-band">
+  <span class="kicker">Open Enrollment</span>
+  <h1 class="offer-title">The Stage Sprint</h1>
+</div>
+
+<section class="wrap main-grid">
+  <div class="outcome">
+    <h2>Book 10 low-risk stages in 30 days, and become Green Room Ready.</h2>
+    <p>You don't need a bigger following, or a louder pitch. You need proof: real stages, real reps, before you chase the one you actually want.</p>
+    <img class="outcome-mockup" src="images/stage-sprint-product-mockup.png" alt="The Stage Sprint product mockup: laptop, tablet, and toolkit guides">
+    <ul class="outcome-list">
+      <li><span class="check">✓</span><span>The <strong>exact blueprint</strong> to find and pitch low-risk stages fast, including where to find them</span></li>
+      <li><span class="check">✓</span><span><strong>Live implementation workshops</strong> where the work gets done together, not just explained</span></li>
+      <li><span class="check">✓</span><span>Direct coaching from <strong>Laurie Mabelis</strong>, who's coached 250+ entrepreneurs and prepared speakers for TEDx for 3+ years</span></li>
+      <li><span class="check">✓</span><span><strong>Accountability support</strong> between every session, so momentum never stalls</span></li>
+      <li><span class="check">✓</span><span>An <strong>intimate community</strong> of people doing this alongside you</span></li>
+      <li><span class="check">✓</span><span>The <strong>Green Room Ready framework</strong>, so you always know your next move</span></li>
+      <li><span class="check">✓</span><span>A clear goal: <strong>10 low-risk stages pitched and booked</strong> in 30 days</span></li>
+    </ul>
+    <p class="scale-line">Trained alongside <strong>Dean Graziosi &amp; Nick Santonastasso's</strong> own students, and trusted by <strong>TEDx</strong> for 3+ years.</p>
+  </div>
+
+  <div class="payment-col">
+    <div class="payment-frame">
+      <span class="special-badge">Special Launch Offer</span>
+      <div class="payment-price">
+        <span class="was">€997</span><span class="now">€497</span> <span class="unit">one time</span>
+      </div>
+      <div class="payment-plans">
+        <span>or 2 payments of €275, one month apart</span>
+        <span>or 5 payments of €120, every two weeks</span>
+      </div>
+      <div class="ghl-embed-wrap">
+        <iframe
+          src="https://lauriemabelis.com/community"
+          width="100%"
+          height="1000"
+          scrolling="no"
+          style="border: none; display: block; overflow: hidden;"
+          allow="payment *"
+          title="Secure payment checkout">
+        </iframe>
+      </div>
+      <span class="payment-fallback">Having trouble with the form? <a href="https://lauriemabelis.com/community" target="_blank" rel="noopener noreferrer">Open the payment page directly →</a></span>
+    </div>
+  </div>
+</section>
+
+<section class="testi-section wrap">
+  <h2>What one low-risk stage can lead to</h2>
+  <div class="testi-grid">
+    <div class="testi-card">
+      <div class="result">$50K Deal</div>
+      <img src="images/tami.jpeg" alt="Tami">
+      <div class="name">Tami</div>
+      <div class="role">Tax Expert</div>
+      <p class="quote">From no speaking experience to a $50k deal, through one podcast-style stage.</p>
+    </div>
+    <div class="testi-card">
+      <div class="result">Got a TEDx</div>
+      <img src="images/duncan.jpg" alt="Duncan">
+      <div class="name">Duncan</div>
+      <div class="role">Stage Sprint Client</div>
+      <p class="quote">His story got recognized on a small stage, and it turned into a TEDx talk.</p>
+    </div>
+    <div class="testi-card">
+      <div class="result">Got on TV</div>
+      <img src="images/noel.jpg" alt="Noel">
+      <div class="name">Noel</div>
+      <div class="role">Stage Sprint Client</div>
+      <p class="quote">Got recognized speaking on a small stage, then invited to stream on national TV.</p>
+    </div>
+  </div>
+</section>
+
+<section class="faq-section wrap">
+  <h2>Before you join</h2>
+  <details class="faq-item">
+    <summary>I don't have a big following yet, is this still for me?</summary>
+    <p>Yes. Low-risk stages don't require a following, they require a message and a system. That's exactly what the sprint builds.</p>
+  </details>
+  <details class="faq-item">
+    <summary>What if I've never spoken on a stage before?</summary>
+    <p>That's what the low-risk stages are for. The sprint is built to get your first reps in front of a forgiving room before you ever face a bigger one.</p>
+  </details>
+  <details class="faq-item">
+    <summary>What's the commitment, and what are the exact dates and times?</summary>
+    <p>The Stage Sprint is a 30 day immersion. The live workshops run on August 19, August 26, September 2, and September 9.</p>
+    <p style="margin-top: 10px;">Each session is 4:00–5:00 PM Amsterdam time (CEST), 10:00–11:00 AM Eastern Time (EDT), 7:00–8:00 AM Pacific Time (PDT). Replays are always available, so you're never locked out if you miss one live.</p>
+  </details>
+</section>
