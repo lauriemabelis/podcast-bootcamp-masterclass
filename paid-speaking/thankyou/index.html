@@ -1,0 +1,670 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You're In · The Path to Paid Speaking Gigs</title>
+  <meta name="description" content="You're registered for The Path to Paid Speaking Gigs masterclass. Here's what to do next." />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --bg:        #000321;
+      --bg-alt:    #0D1029;
+      --ink:       #FFFFFF;
+      --ink-2:     #B7C2CC;
+      --accent:    #FF6C00;
+      --accent-dk: #E55F00;
+      --cta:       #FF6240;
+      --border:    rgba(255, 108, 0, 0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 720px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+
+    /* ── HEADER BANNER ── */
+    header {
+      width: 100%;
+      background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
+      padding: 14px 24px;
+      text-align: center;
+    }
+
+    .eyebrow {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #000321;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 36px 0 40px;
+      text-align: center;
+    }
+
+    .check-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(255, 108, 0, 0.1);
+      border: 1px solid rgba(255, 108, 0, 0.35);
+      border-radius: 9999px;
+      padding: 8px 20px;
+      margin-bottom: 24px;
+    }
+
+    .check-badge .mark {
+      width: 18px;
+      height: 18px;
+      border-radius: 9999px;
+      background: var(--accent);
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .check-badge span.label {
+      font-family: 'Inter', sans-serif;
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .hero-title {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: clamp(2.3rem, 9vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 10px;
+    }
+
+    .grad-text {
+      background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero-subtitle {
+      position: relative;
+      display: inline-block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: clamp(1.1rem, 4.6vw, 1.5rem);
+      font-weight: 800;
+      letter-spacing: 0.02em;
+      text-transform: uppercase;
+      color: var(--ink);
+      z-index: 1;
+      padding: 0 2px;
+      margin-bottom: 22px;
+    }
+
+    .hero-subtitle::after {
+      content: '';
+      position: absolute;
+      left: -5px;
+      right: -5px;
+      bottom: 4px;
+      height: 0.5em;
+      background: var(--accent);
+      opacity: 1;
+      transform: skewX(-8deg);
+      border-radius: 2px;
+      z-index: -1;
+    }
+
+    .hero p.lede {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--ink-2);
+      line-height: 1.6;
+      max-width: 460px;
+      margin: 0 auto 28px;
+    }
+
+    /* ── CONFIRMATION CARD ── */
+    .confirm-card {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 16px;
+      padding: 24px 28px;
+      text-align: left;
+    }
+
+    .confirm-card .label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 700;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 8px;
+    }
+
+    .confirm-card .event {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 14px;
+    }
+
+    .confirm-card .when {
+      display: flex;
+      align-items: flex-start;
+      gap: 10px;
+      font-size: 0.9rem;
+      color: var(--ink-2);
+      padding-top: 14px;
+      border-top: 1px solid var(--border);
+    }
+
+    .confirm-card .when-text {
+      flex: 1;
+      min-width: 0;
+      line-height: 1.5;
+    }
+
+    .confirm-card .when .dot {
+      margin-top: 6px;
+    }
+
+    .confirm-card .when .dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 9999px;
+      background: var(--accent);
+      flex-shrink: 0;
+      box-shadow: 0 0 0 3px rgba(255, 108, 0, 0.18);
+    }
+
+    /* ── DIVIDER ── */
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: linear-gradient(90deg, #FF6C00, #FF6240);
+      border-radius: 9999px;
+      margin: 0 auto 40px;
+    }
+
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+      text-align: center;
+      margin-bottom: 6px;
+    }
+
+    .section-title {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: clamp(1.3rem, 4vw, 1.7rem);
+      font-weight: 700;
+      text-align: center;
+      margin-bottom: 40px;
+    }
+
+    /* ── STEPS ── */
+    .steps {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 56px;
+      text-align: left;
+    }
+
+    .step {
+      display: flex;
+      gap: 18px;
+      position: relative;
+      padding-bottom: 36px;
+    }
+
+    .step:last-child {
+      padding-bottom: 0;
+    }
+
+    .step:not(:last-child)::before {
+      content: '';
+      position: absolute;
+      left: 21px;
+      top: 44px;
+      bottom: 0;
+      width: 2px;
+      background: rgba(255, 108, 0, 0.25);
+    }
+
+    .step-num {
+      flex-shrink: 0;
+      width: 44px;
+      height: 44px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #fff;
+      position: relative;
+      z-index: 1;
+    }
+
+    .step-body {
+      padding-top: 6px;
+      flex: 1;
+    }
+
+    .step-body strong {
+      display: block;
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+      color: var(--ink);
+    }
+
+    .step-body p {
+      font-size: 0.92rem;
+      color: var(--ink-2);
+      line-height: 1.55;
+      margin-bottom: 16px;
+    }
+
+    .step-actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      align-items: center;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      padding: 12px 22px;
+      background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
+      color: #fff;
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 0.9rem;
+      font-weight: 700;
+      letter-spacing: 0.01em;
+      border-radius: 9999px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+    }
+
+    .btn:hover {
+      opacity: 0.9;
+      transform: translateY(-1px);
+    }
+
+    .btn-ghost {
+      background: transparent;
+      color: var(--ink-2);
+      border: 1px solid var(--border);
+      font-weight: 600;
+    }
+
+    .btn-ghost:hover {
+      color: var(--ink);
+      opacity: 1;
+      border-color: rgba(255, 108, 0, 0.4);
+    }
+
+    /* ── SHARE MESSAGE BOX ── */
+    .share-box {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+      margin-top: 4px;
+    }
+
+    .share-box .msg-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.7rem;
+      font-weight: 700;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+      margin-bottom: 10px;
+    }
+
+    .share-box .msg-text {
+      font-size: 0.88rem;
+      color: var(--ink);
+      line-height: 1.55;
+      margin-bottom: 14px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0 40px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--ink-2);
+      line-height: 1.6;
+    }
+
+    footer a {
+      color: var(--accent);
+      text-decoration: none;
+    }
+
+    /* ── MOBILE ── */
+    @media (max-width: 600px) {
+      .wrap {
+        padding-inline: 16px;
+      }
+
+      header {
+        padding: 12px 16px;
+      }
+
+      .eyebrow {
+        font-size: 0.68rem;
+        letter-spacing: 0.10em;
+      }
+
+      .hero {
+        padding: 28px 0 32px;
+      }
+
+      .hero-title {
+        font-size: clamp(2rem, 10vw, 2.6rem);
+      }
+
+      .hero-subtitle {
+        font-size: clamp(1rem, 5.5vw, 1.2rem);
+      }
+
+      .confirm-card {
+        padding: 20px 18px;
+      }
+
+      .section-title {
+        margin-bottom: 28px;
+      }
+
+      .steps {
+        margin-bottom: 28px;
+      }
+
+      .step {
+        gap: 14px;
+        padding-bottom: 28px;
+      }
+
+      .step:not(:last-child)::before {
+        left: 17px;
+        top: 36px;
+      }
+
+      .step-num {
+        width: 36px;
+        height: 36px;
+        font-size: 0.9rem;
+      }
+
+      .step-body {
+        padding-top: 2px;
+      }
+
+      .step-body strong {
+        font-size: 1rem;
+      }
+
+      .btn {
+        width: 100%;
+        justify-content: center;
+        padding: 14px 20px;
+      }
+
+      footer {
+        padding: 20px 0 28px;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #confetti-canvas { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+    SESSION DATE lives in exactly three places in this file:
+      1. the .confirm-card "when" line below
+      2. step 01 body copy ("Block ...")
+      3. startUTC / endUTC in the script at the bottom
+    Change all three together, and keep them in step with /paid-speaking/index.html.
+  -->
+
+  <header>
+    <div class="wrap">
+      <span class="eyebrow">The Path to Paid Speaking Gigs · Registration Confirmed</span>
+    </div>
+  </header>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="check-badge">
+        <span class="mark">&#10003;</span>
+        <span class="label">You're registered, see you live</span>
+      </div>
+
+      <h1 class="hero-title">YOU'RE <span class="grad-text">IN.</span></h1>
+      <p class="hero-subtitle">Podcasts Are Your Fastest Way In</p>
+
+      <p class="lede">
+        A confirmation email is on its way. Check your inbox, and your spam folder, just in case.
+      </p>
+
+      <div class="confirm-card">
+        <p class="label">You're registered for</p>
+        <p class="event">The Path to Paid Speaking Gigs, Free Live Masterclass</p>
+        <div class="when">
+          <span class="dot"></span>
+          <span class="when-text">August 11 · 6-7PM CET · 12-1PM EST · 9-10AM PST</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="divider"></div>
+
+    <p class="section-label">Before we go live</p>
+    <p class="section-title">Three things to do right now</p>
+
+    <div class="steps">
+      <div class="step">
+        <div class="step-num">01</div>
+        <div class="step-body">
+          <strong>Add it to your calendar</strong>
+          <p>Block August 11, 6 to 7 PM CET, before life fills the slot. Set a reminder for 15 minutes before, so you show up focused and ready.</p>
+          <div class="step-actions">
+            <a class="btn" id="gcal-btn" href="#" target="_blank" rel="noopener">Add to Google Calendar</a>
+            <a class="btn btn-ghost" id="ics-btn" href="#" download="path-to-paid-speaking-gigs-masterclass.ics">Download .ics</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">02</div>
+        <div class="step-body">
+          <strong>Join the Facebook group</strong>
+          <p>Introduce yourself. Tell us who you are, what your big speaking goal is, and why this masterclass matters to you.</p>
+          <div class="step-actions">
+            <a class="btn" href="https://facebook.com/groups/dextropreneur" target="_blank" rel="noopener">Join the group</a>
+          </div>
+        </div>
+      </div>
+
+      <div class="step">
+        <div class="step-num">03</div>
+        <div class="step-body">
+          <strong>Invite a friend</strong>
+          <p>Know an expert, coach or founder whose voice deserves to be heard? Send them this link, the journey's more fun with someone brilliant along for it.</p>
+          <div class="share-box">
+            <p class="msg-label">Copy and send this</p>
+            <p class="msg-text" id="share-copy-text">Hey! I just signed up for a free masterclass with Laurie Mabelis about getting booked and paid to speak, using podcasts as the fastest way in. I thought of you immediately. Register here: podcast-bootcamp-masterclass.pages.dev/2</p>
+            <button class="btn btn-ghost" id="share-copy-btn">Copy message</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <div class="wrap">
+      <p>
+        &copy; 2026 Dextropreneur · <a href="mailto:laurie@dextropreneur.com">laurie@dextropreneur.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      var gcalBtn = document.getElementById('gcal-btn');
+      var icsBtn = document.getElementById('ics-btn');
+
+      var startUTC = '20260811T160000Z';
+      var endUTC = '20260811T170000Z';
+      var title = 'The Path to Paid Speaking Gigs, Free Masterclass';
+      var zoomLink = 'https://us06web.zoom.us/j/2106199726';
+      var details = 'Live masterclass with Laurie Mabelis. Podcasts as your fastest way into paid speaking gigs. Join here: ' + zoomLink;
+
+      var gcalUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
+        + '&text=' + encodeURIComponent(title)
+        + '&dates=' + startUTC + '/' + endUTC
+        + '&details=' + encodeURIComponent(details)
+        + '&location=' + encodeURIComponent(zoomLink);
+      gcalBtn.href = gcalUrl;
+
+      var ics = [
+        'BEGIN:VCALENDAR',
+        'VERSION:2.0',
+        'BEGIN:VEVENT',
+        'DTSTART:' + startUTC,
+        'DTEND:' + endUTC,
+        'SUMMARY:' + title,
+        'DESCRIPTION:' + details,
+        'LOCATION:' + zoomLink,
+        'URL:' + zoomLink,
+        'END:VEVENT',
+        'END:VCALENDAR'
+      ].join('\r\n');
+      icsBtn.href = 'data:text/calendar;charset=utf8,' + encodeURIComponent(ics);
+    })();
+
+    (function () {
+      var btn = document.getElementById('share-copy-btn');
+      var text = document.getElementById('share-copy-text');
+      if (btn && text) {
+        btn.addEventListener('click', function () {
+          navigator.clipboard.writeText(text.textContent.trim()).then(function () {
+            btn.textContent = 'Copied!';
+            setTimeout(function () {
+              btn.textContent = 'Copy message';
+            }, 2500);
+          });
+        });
+      }
+    })();
+
+    if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      var canvas = document.createElement('canvas');
+      canvas.id = 'confetti-canvas';
+      canvas.style.cssText = 'position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:9999;';
+      document.body.appendChild(canvas);
+      var ctx = canvas.getContext('2d');
+      canvas.width = window.innerWidth;
+      canvas.height = window.innerHeight;
+
+      var colors = ['#FF6C00', '#FF6240', '#FFD166', '#ffffff', '#10B981'];
+      var pieces = [];
+      for (var i = 0; i < 160; i++) {
+        pieces.push({
+          x: Math.random() * canvas.width,
+          y: -20 - Math.random() * canvas.height * 0.6,
+          w: 7 + Math.random() * 9,
+          h: 3 + Math.random() * 5,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          vx: (Math.random() - 0.5) * 4,
+          vy: 1.5 + Math.random() * 3.5,
+          rot: Math.random() * Math.PI * 2,
+          rotV: (Math.random() - 0.5) * 0.18
+        });
+      }
+
+      var start = Date.now();
+      var FALL = 3200;
+      var FADE = 800;
+
+      function tick() {
+        var elapsed = Date.now() - start;
+        if (elapsed > FALL + FADE) { canvas.remove(); return; }
+
+        ctx.clearRect(0, 0, canvas.width, canvas.height);
+        var alpha = elapsed > FALL ? 1 - (elapsed - FALL) / FADE : 1;
+
+        pieces.forEach(function (p) {
+          p.x += p.vx;
+          p.y += p.vy;
+          p.vy += 0.06;
+          p.rot += p.rotV;
+          ctx.save();
+          ctx.globalAlpha = alpha;
+          ctx.translate(p.x, p.y);
+          ctx.rotate(p.rot);
+          ctx.fillStyle = p.color;
+          ctx.fillRect(-p.w / 2, -p.h / 2, p.w, p.h);
+          ctx.restore();
+        });
+
+        requestAnimationFrame(tick);
+      }
+      tick();
+    }
+  </script>
+</body>
+</html>
