@@ -3,11 +3,10 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>One Time Offer · Confidence to Speak</title>
-  <meta name="description" content="A registrant-only price on Confidence to Speak. The inner work that decides who pitches, who gets booked, and who charges a fee." />
+  <title>Confidence to Speak · Registrant Offer</title>
+  <meta name="description" content="The proven blueprint for unshakable speaking confidence, so you can own any stage, speak to any crowd, at any time. Registrant price for masterclass sign-ups." />
   <meta name="robots" content="noindex" />
 
-  <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
@@ -24,8 +23,8 @@
       --ink:       #FFFFFF;
       --ink-2:     #B7C2CC;
       --accent:    #FF6C00;
-      --accent-dk: #E55F00;
       --cta:       #FF6240;
+      --green:     #10B981;
       --border:    rgba(255, 108, 0, 0.12);
     }
 
@@ -39,442 +38,299 @@
       overflow-x: hidden;
     }
 
-    .wrap {
-      width: 100%;
-      max-width: 720px;
-      margin-inline: auto;
-      padding-inline: 24px;
-    }
+    .wrap { width: 100%; max-width: 760px; margin-inline: auto; padding-inline: 24px; }
 
     /* ── STICKY COUNTDOWN ── */
     .timer-bar {
-      position: sticky;
-      top: 0;
-      z-index: 50;
-      width: 100%;
+      position: sticky; top: 0; z-index: 50; width: 100%;
       background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
-      padding: 10px 24px;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 12px;
-      flex-wrap: wrap;
+      padding: 10px 24px; text-align: center;
+      display: flex; align-items: center; justify-content: center;
+      gap: 12px; flex-wrap: wrap;
     }
-
     .timer-bar .label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #000321;
+      font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800;
+      letter-spacing: 0.12em; text-transform: uppercase; color: #000321;
     }
-
     .timer-bar .clock {
-      font-family: 'Sora', system-ui, sans-serif;
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: #fff;
-      background: rgba(0, 3, 33, 0.55);
-      border-radius: 8px;
-      padding: 3px 12px;
-      font-variant-numeric: tabular-nums;
-      min-width: 78px;
+      font-family: 'Sora', system-ui, sans-serif; font-size: 1.05rem; font-weight: 800;
+      color: #fff; background: rgba(0, 3, 33, 0.55); border-radius: 8px;
+      padding: 3px 12px; font-variant-numeric: tabular-nums; min-width: 78px;
     }
 
     /* ── HERO ── */
-    .hero {
-      padding: 40px 0 36px;
-      text-align: center;
-    }
+    .hero { padding: 44px 0 36px; text-align: center; }
 
     .check-badge {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      background: rgba(16, 185, 129, 0.1);
-      border: 1px solid rgba(16, 185, 129, 0.4);
-      border-radius: 9999px;
-      padding: 8px 20px;
-      margin-bottom: 24px;
+      display: inline-flex; align-items: center; gap: 10px;
+      background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.4);
+      border-radius: 9999px; padding: 8px 20px; margin-bottom: 24px;
     }
-
     .check-badge .mark {
-      width: 18px;
-      height: 18px;
-      border-radius: 9999px;
-      background: #10B981;
-      color: #fff;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.68rem;
-      font-weight: 700;
-      flex-shrink: 0;
+      width: 18px; height: 18px; border-radius: 9999px; background: var(--green);
+      color: #fff; display: flex; align-items: center; justify-content: center;
+      font-size: 0.68rem; font-weight: 700; flex-shrink: 0;
     }
+    .check-badge span.label { font-size: 0.82rem; font-weight: 500; }
 
-    .check-badge span.label {
-      font-size: 0.82rem;
-      font-weight: 500;
-      color: var(--ink);
+    .eyebrow {
+      font-family: 'Montserrat', sans-serif; font-size: 0.74rem; font-weight: 800;
+      letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent);
+      margin-bottom: 12px;
     }
 
     .hero-title {
       font-family: 'Sora', system-ui, sans-serif;
-      font-size: clamp(2.1rem, 8vw, 3.2rem);
-      font-weight: 800;
-      line-height: 1.05;
-      letter-spacing: -0.01em;
-      margin-bottom: 14px;
+      font-size: clamp(2rem, 7.5vw, 3.1rem); font-weight: 800;
+      line-height: 1.06; letter-spacing: -0.01em; margin-bottom: 16px;
     }
 
     .grad-text {
       background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
     }
 
     .hero p.lede {
-      font-size: 1.05rem;
-      font-weight: 500;
-      color: var(--ink-2);
-      line-height: 1.65;
-      max-width: 520px;
-      margin: 0 auto;
+      font-size: 1.06rem; font-weight: 500; color: var(--ink-2);
+      line-height: 1.65; max-width: 540px; margin: 0 auto 28px;
     }
-
     .hero p.lede strong { color: var(--ink); font-weight: 600; }
 
-    /* ── PULL QUOTE ── */
-    .pull {
-      background: var(--bg-alt);
-      border-left: 3px solid var(--accent);
-      border-radius: 0 14px 14px 0;
-      padding: 20px 24px;
-      margin: 36px 0;
-      font-family: 'Sora', system-ui, sans-serif;
-      font-size: 1.08rem;
-      font-weight: 600;
-      line-height: 1.5;
+    .tagline {
+      font-family: 'Montserrat', sans-serif; font-size: 0.78rem; font-weight: 700;
+      letter-spacing: 0.18em; text-transform: uppercase; color: var(--ink-2);
     }
 
     /* ── SECTIONS ── */
     .divider {
-      width: 48px;
-      height: 3px;
-      background: linear-gradient(90deg, #FF6C00, #FF6240);
-      border-radius: 9999px;
-      margin: 0 auto 36px;
+      width: 48px; height: 3px; border-radius: 9999px;
+      background: linear-gradient(90deg, #FF6C00, #FF6240); margin: 0 auto 36px;
     }
 
     .section-label {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.76rem;
-      font-weight: 700;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      text-align: center;
-      margin-bottom: 8px;
+      font-family: 'Montserrat', sans-serif; font-size: 0.76rem; font-weight: 700;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent);
+      text-align: center; margin-bottom: 8px;
     }
 
     .section-title {
       font-family: 'Sora', system-ui, sans-serif;
-      font-size: clamp(1.4rem, 4.5vw, 1.9rem);
-      font-weight: 700;
-      text-align: center;
-      line-height: 1.2;
-      margin-bottom: 14px;
+      font-size: clamp(1.4rem, 4.6vw, 1.95rem); font-weight: 700;
+      text-align: center; line-height: 1.2; margin-bottom: 14px;
     }
 
     .section-sub {
-      font-size: 0.98rem;
-      color: var(--ink-2);
-      line-height: 1.6;
-      text-align: center;
-      max-width: 520px;
-      margin: 0 auto 36px;
+      font-size: 0.98rem; color: var(--ink-2); line-height: 1.6;
+      text-align: center; max-width: 540px; margin: 0 auto 36px;
     }
 
-    /* ── CAUSE CARDS ── */
-    .causes {
-      display: grid;
-      gap: 14px;
-      margin-bottom: 56px;
+    /* ── PULL QUOTE ── */
+    .pull {
+      background: var(--bg-alt); border-left: 3px solid var(--accent);
+      border-radius: 0 14px 14px 0; padding: 20px 24px; margin: 36px 0;
+      font-family: 'Sora', system-ui, sans-serif; font-size: 1.06rem;
+      font-weight: 600; line-height: 1.5;
     }
 
-    .cause {
-      background: var(--bg-alt);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px 22px;
+    /* ── CHECK / CROSS LISTS ── */
+    .list { display: grid; gap: 12px; margin-bottom: 40px; }
+
+    .list-item {
+      display: flex; gap: 13px; align-items: flex-start;
+      font-size: 0.95rem; line-height: 1.6; color: var(--ink-2);
+    }
+    .list-item .icon {
+      flex-shrink: 0; width: 22px; height: 22px; border-radius: 9999px;
+      display: flex; align-items: center; justify-content: center;
+      font-size: 0.66rem; font-weight: 700; margin-top: 2px;
+    }
+    .icon.no  { background: rgba(255, 98, 64, 0.15); border: 1px solid rgba(255, 98, 64, 0.5); color: var(--cta); }
+    .icon.yes { background: rgba(16, 185, 129, 0.14); border: 1px solid rgba(16, 185, 129, 0.5); color: var(--green); }
+    .list-item strong { color: var(--ink); font-weight: 600; }
+
+    /* ── CARDS ── */
+    .cards { display: grid; gap: 14px; margin-bottom: 48px; }
+
+    .card {
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: 14px; padding: 20px 22px;
+    }
+    .card strong {
+      display: block; font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1.02rem; font-weight: 700; margin-bottom: 6px;
+    }
+    .card p { font-size: 0.92rem; color: var(--ink-2); line-height: 1.6; }
+
+    /* ── BEFORE / AFTER ── */
+    .ba { display: grid; gap: 16px; margin-bottom: 48px; }
+    @media (min-width: 720px) { .ba { grid-template-columns: 1fr 1fr; } }
+
+    .ba-col { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 16px; padding: 22px; }
+    .ba-col.after { border-color: rgba(16, 185, 129, 0.35); }
+
+    .ba-head {
+      font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800;
+      letter-spacing: 0.12em; text-transform: uppercase; margin-bottom: 16px;
+    }
+    .ba-col.before .ba-head { color: var(--cta); }
+    .ba-col.after  .ba-head { color: var(--green); }
+
+    .ba-col ul { list-style: none; display: grid; gap: 14px; }
+    .ba-col li { font-size: 0.92rem; color: var(--ink-2); line-height: 1.55; }
+    .ba-col li strong { display: block; color: var(--ink); font-weight: 600; margin-bottom: 2px; }
+
+    /* ── NUMBERED STACK ── */
+    .stack { display: flex; flex-direction: column; margin-bottom: 40px; }
+
+    .stack-item { display: flex; gap: 18px; position: relative; padding-bottom: 30px; }
+    .stack-item:last-child { padding-bottom: 0; }
+    .stack-item:not(:last-child)::before {
+      content: ''; position: absolute; left: 21px; top: 46px; bottom: 0;
+      width: 2px; background: rgba(255, 108, 0, 0.25);
     }
 
-    .cause strong {
-      display: block;
-      font-family: 'Sora', system-ui, sans-serif;
-      font-size: 1.02rem;
-      font-weight: 700;
-      margin-bottom: 6px;
-    }
-
-    .cause p {
-      font-size: 0.92rem;
-      color: var(--ink-2);
-      line-height: 1.6;
-    }
-
-    /* ── VOICES ── */
-    .voices {
-      display: grid;
-      gap: 14px;
-      margin-bottom: 28px;
-    }
-
-    .voice {
-      background: var(--bg-alt);
-      border: 1px solid var(--border);
-      border-radius: 14px;
-      padding: 20px 22px;
-      display: flex;
-      gap: 16px;
-      align-items: flex-start;
-    }
-
-    .voice-tag {
-      flex-shrink: 0;
-      width: 42px;
-      height: 42px;
-      border-radius: 12px;
+    .stack-num {
+      flex-shrink: 0; width: 44px; height: 44px; border-radius: 9999px;
       background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.15rem;
-      font-weight: 900;
-      color: #fff;
+      display: flex; align-items: center; justify-content: center;
+      font-family: 'Montserrat', sans-serif; font-size: 1rem; font-weight: 800;
+      color: #fff; position: relative; z-index: 1;
     }
 
-    .voice-body strong {
-      display: block;
-      font-family: 'Sora', system-ui, sans-serif;
-      font-size: 1.02rem;
-      font-weight: 700;
-      margin-bottom: 5px;
+    .stack-body { padding-top: 5px; flex: 1; }
+    .stack-body strong {
+      display: block; font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1.05rem; font-weight: 700; margin-bottom: 6px;
     }
+    .stack-body p { font-size: 0.92rem; color: var(--ink-2); line-height: 1.6; }
 
-    .voice-body p {
-      font-size: 0.92rem;
-      color: var(--ink-2);
-      line-height: 1.6;
+    /* ── TESTIMONIALS ── */
+    .quotes { display: grid; gap: 14px; margin-bottom: 48px; }
+
+    .quote { background: var(--bg-alt); border: 1px solid var(--border); border-radius: 14px; padding: 20px 22px; }
+    .quote p {
+      font-family: 'Sora', system-ui, sans-serif; font-size: 1rem;
+      font-weight: 600; line-height: 1.5; margin-bottom: 10px;
     }
+    .quote .who { font-size: 0.84rem; color: var(--ink-2); }
+    .quote .who b { color: var(--accent); font-weight: 700; }
 
-    /* ── INCLUDES ── */
-    .includes {
-      display: flex;
-      flex-direction: column;
-      gap: 2px;
-      margin-bottom: 40px;
+    /* ── STORY ── */
+    .story {
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: 16px; padding: 24px; margin-bottom: 16px;
     }
-
-    .include {
-      display: flex;
-      gap: 14px;
-      align-items: flex-start;
-      padding: 14px 0;
-      border-bottom: 1px solid var(--border);
+    .story h4 {
+      font-family: 'Sora', system-ui, sans-serif; font-size: 1.08rem;
+      font-weight: 700; margin-bottom: 10px;
     }
+    .story p { font-size: 0.92rem; color: var(--ink-2); line-height: 1.65; margin-bottom: 10px; }
+    .story p:last-child { margin-bottom: 0; }
+    .story .result { color: var(--ink); font-weight: 600; }
 
-    .include:last-child { border-bottom: none; }
-
-    .include .tick {
-      flex-shrink: 0;
-      width: 22px;
-      height: 22px;
-      border-radius: 9999px;
-      background: rgba(255, 108, 0, 0.15);
-      border: 1px solid rgba(255, 108, 0, 0.45);
-      color: var(--accent);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 0.7rem;
-      font-weight: 700;
-      margin-top: 2px;
-    }
-
-    .include .text { flex: 1; }
-
-    .include .text strong {
-      display: block;
-      font-family: 'Sora', system-ui, sans-serif;
-      font-size: 0.98rem;
-      font-weight: 700;
-      margin-bottom: 3px;
-    }
-
-    .include .text p {
-      font-size: 0.88rem;
-      color: var(--ink-2);
-      line-height: 1.55;
-    }
-
-    /* ── OFFER BOX ── */
+    /* ── OFFER ── */
     .offer {
-      background: var(--bg-alt);
-      border: 1px solid rgba(255, 108, 0, 0.35);
-      border-radius: 20px;
-      padding: 32px 28px;
-      text-align: center;
-      margin-bottom: 20px;
+      background: var(--bg-alt); border: 1px solid rgba(255, 108, 0, 0.35);
+      border-radius: 20px; padding: 34px 28px; text-align: center; margin-bottom: 20px;
     }
-
     .offer .kicker {
-      font-family: 'Montserrat', sans-serif;
-      font-size: 0.72rem;
-      font-weight: 800;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 14px;
+      font-family: 'Montserrat', sans-serif; font-size: 0.72rem; font-weight: 800;
+      letter-spacing: 0.12em; text-transform: uppercase; color: var(--accent); margin-bottom: 14px;
     }
-
     .offer h3 {
       font-family: 'Sora', system-ui, sans-serif;
-      font-size: clamp(1.5rem, 5vw, 2rem);
-      font-weight: 800;
-      margin-bottom: 18px;
+      font-size: clamp(1.5rem, 5vw, 2rem); font-weight: 800; margin-bottom: 18px;
     }
 
     .price-row {
-      display: flex;
-      align-items: baseline;
-      justify-content: center;
-      gap: 14px;
-      margin-bottom: 8px;
-      flex-wrap: wrap;
+      display: flex; align-items: baseline; justify-content: center;
+      gap: 14px; margin-bottom: 8px; flex-wrap: wrap;
     }
-
     .price-old {
-      font-family: 'Sora', system-ui, sans-serif;
-      font-size: 1.4rem;
-      font-weight: 600;
-      color: var(--ink-2);
-      text-decoration: line-through;
-      text-decoration-color: var(--cta);
-      text-decoration-thickness: 2px;
+      font-family: 'Sora', system-ui, sans-serif; font-size: 1.4rem; font-weight: 600;
+      color: var(--ink-2); text-decoration: line-through;
+      text-decoration-color: var(--cta); text-decoration-thickness: 2px;
     }
-
     .price-new {
       font-family: 'Sora', system-ui, sans-serif;
-      font-size: clamp(2.6rem, 11vw, 3.6rem);
-      font-weight: 800;
-      line-height: 1;
+      font-size: clamp(2.6rem, 11vw, 3.6rem); font-weight: 800; line-height: 1;
     }
-
-    .price-note {
-      font-size: 0.86rem;
-      color: var(--ink-2);
-      margin-bottom: 24px;
-    }
+    .price-note { font-size: 0.86rem; color: var(--ink-2); margin-bottom: 24px; }
 
     .btn {
-      display: inline-flex;
-      align-items: center;
-      justify-content: center;
-      gap: 8px;
-      padding: 16px 32px;
-      background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
-      color: #fff;
-      font-family: 'Sora', system-ui, sans-serif;
-      font-size: 1rem;
-      font-weight: 700;
-      border-radius: 9999px;
-      text-decoration: none;
-      border: none;
-      cursor: pointer;
-      transition: opacity 0.2s, transform 0.2s;
-      width: 100%;
-      max-width: 380px;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 16px 32px; background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
+      color: #fff; font-family: 'Sora', system-ui, sans-serif; font-size: 1rem;
+      font-weight: 700; border-radius: 9999px; text-decoration: none; border: none;
+      cursor: pointer; transition: opacity 0.2s, transform 0.2s;
+      width: 100%; max-width: 400px;
     }
-
     .btn:hover { opacity: 0.92; transform: translateY(-1px); }
 
-    .btn-note {
-      font-size: 0.8rem;
-      color: var(--ink-2);
-      margin-top: 14px;
-      line-height: 1.5;
+    .btn-inline {
+      display: block; width: 100%; max-width: 400px; margin: 0 auto 48px;
     }
+
+    .btn-note { font-size: 0.8rem; color: var(--ink-2); margin-top: 14px; line-height: 1.5; }
 
     .config-warning {
-      display: none;
-      background: rgba(255, 98, 64, 0.12);
-      border: 1px solid rgba(255, 98, 64, 0.5);
-      border-radius: 10px;
-      padding: 12px 16px;
-      margin-top: 16px;
-      font-size: 0.85rem;
-      color: #FFB4A0;
-      line-height: 1.5;
-      text-align: left;
+      display: none; background: rgba(255, 98, 64, 0.12);
+      border: 1px solid rgba(255, 98, 64, 0.5); border-radius: 10px;
+      padding: 12px 16px; margin-top: 16px; font-size: 0.85rem;
+      color: #FFB4A0; line-height: 1.5; text-align: left;
     }
 
-    /* ── SKIP ── */
-    .skip {
-      text-align: center;
-      padding-bottom: 48px;
+    /* ── GUARANTEE ── */
+    .guarantee {
+      background: rgba(16, 185, 129, 0.07); border: 1px solid rgba(16, 185, 129, 0.35);
+      border-radius: 16px; padding: 24px; margin-bottom: 48px; text-align: center;
     }
-
-    .skip a {
-      font-size: 0.88rem;
-      color: var(--ink-2);
-      text-decoration: underline;
-      text-underline-offset: 3px;
+    .guarantee strong {
+      display: block; font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1.1rem; font-weight: 700; margin-bottom: 10px;
     }
+    .guarantee p { font-size: 0.92rem; color: var(--ink-2); line-height: 1.65; }
 
+    /* ── FAQ ── */
+    .faq { margin-bottom: 40px; }
+
+    .faq details {
+      border-bottom: 1px solid var(--border); padding: 4px 0;
+    }
+    .faq summary {
+      cursor: pointer; list-style: none; padding: 16px 30px 16px 0;
+      font-family: 'Sora', system-ui, sans-serif; font-size: 0.98rem;
+      font-weight: 600; position: relative;
+    }
+    .faq summary::-webkit-details-marker { display: none; }
+    .faq summary::after {
+      content: '+'; position: absolute; right: 4px; top: 50%;
+      transform: translateY(-50%); color: var(--accent);
+      font-size: 1.3rem; font-weight: 700; line-height: 1;
+    }
+    .faq details[open] summary::after { content: '\2013'; }
+    .faq details p {
+      font-size: 0.92rem; color: var(--ink-2); line-height: 1.65;
+      padding: 0 0 18px; margin: 0;
+    }
+    .faq details ul { padding: 0 0 18px 20px; }
+    .faq details li { font-size: 0.92rem; color: var(--ink-2); line-height: 1.6; margin-bottom: 6px; }
+
+    /* ── EXPIRED ── */
+    .expired {
+      background: var(--bg-alt); border: 1px solid var(--border);
+      border-radius: 20px; padding: 32px 28px; text-align: center; margin-bottom: 20px;
+    }
+    .expired h3 { font-family: 'Sora', system-ui, sans-serif; font-size: 1.4rem; font-weight: 700; margin-bottom: 12px; }
+    .expired p { font-size: 0.95rem; color: var(--ink-2); line-height: 1.6; margin-bottom: 22px; }
+
+    /* ── SKIP + FOOTER ── */
+    .skip { text-align: center; padding-bottom: 48px; }
+    .skip a { font-size: 0.88rem; color: var(--ink-2); text-decoration: underline; text-underline-offset: 3px; }
     .skip a:hover { color: var(--ink); }
 
-    /* ── EXPIRED STATE ── */
-    .expired {
-      background: var(--bg-alt);
-      border: 1px solid var(--border);
-      border-radius: 20px;
-      padding: 32px 28px;
-      text-align: center;
-      margin-bottom: 20px;
-    }
-
-    .expired h3 {
-      font-family: 'Sora', system-ui, sans-serif;
-      font-size: 1.4rem;
-      font-weight: 700;
-      margin-bottom: 12px;
-    }
-
-    .expired p {
-      font-size: 0.95rem;
-      color: var(--ink-2);
-      line-height: 1.6;
-      margin-bottom: 22px;
-    }
-
-    /* ── FOOTER ── */
-    footer {
-      border-top: 1px solid var(--border);
-      padding: 32px 0 40px;
-      text-align: center;
-    }
-
-    footer p {
-      font-size: 0.8rem;
-      color: var(--ink-2);
-      line-height: 1.6;
-    }
-
+    footer { border-top: 1px solid var(--border); padding: 32px 0 40px; text-align: center; }
+    footer p { font-size: 0.8rem; color: var(--ink-2); line-height: 1.6; }
     footer a { color: var(--accent); text-decoration: none; }
 
     /* ── MOBILE ── */
@@ -483,30 +339,30 @@
       .timer-bar { padding: 8px 16px; gap: 8px; }
       .timer-bar .label { font-size: 0.62rem; letter-spacing: 0.08em; }
       .hero { padding: 30px 0 28px; }
-      .hero-title { font-size: clamp(1.9rem, 9vw, 2.4rem); }
       .pull { padding: 16px 18px; font-size: 1rem; margin: 28px 0; }
-      .cause, .voice { padding: 16px 18px; }
-      .offer, .expired { padding: 26px 18px; }
+      .card, .ba-col, .story, .quote { padding: 17px 18px; }
+      .offer, .expired, .guarantee { padding: 26px 18px; }
       .btn { padding: 15px 24px; font-size: 0.95rem; }
+      .stack-item { gap: 14px; padding-bottom: 24px; }
+      .stack-item:not(:last-child)::before { left: 17px; top: 38px; }
+      .stack-num { width: 36px; height: 36px; font-size: 0.9rem; }
     }
   </style>
 </head>
 <body>
 
   <!--
-    ONE TIME OFFER page. Sits between the registration form and the thank-you page:
-      GHL form submit  ->  /confidence-to-speak/  ->  /special-opportunity/
+    Long-form Confidence to Speak offer page. Reached from the confirmation
+    email, and linked from /special-opportunity/. Copy is adapted from the
+    original Confidence Blueprint sales page, reframed for masterclass
+    registrants whose goal is getting booked and paid.
 
-    Everything commercial lives in the OFFER config block in the script at the
-    bottom of this file. Set CHECKOUT_URL to the order form URL before this
-    page goes into the flow, or the buy button will refuse to navigate and show
-    a warning instead.
-
+    Everything commercial lives in the OFFER config block at the bottom.
     Add ?reset to the URL to clear an expired countdown while testing.
   -->
 
   <div class="timer-bar" id="timer-bar">
-    <span class="label">This price disappears when you leave</span>
+    <span class="label">Registrant price</span>
     <span class="clock" id="clock">15:00</span>
   </div>
 
@@ -514,17 +370,21 @@
     <div class="wrap">
       <div class="check-badge">
         <span class="mark">&#10003;</span>
-        <span class="label">Your seat is saved</span>
+        <span class="label">Your masterclass seat is saved</span>
       </div>
 
-      <h1 class="hero-title">WAIT. ONE <span class="grad-text">THING FIRST.</span></h1>
+      <p class="eyebrow">The proven blueprint for unshakable speaking confidence</p>
+
+      <h1 class="hero-title">OWN ANY STAGE. SPEAK TO ANY CROWD. <span class="grad-text">AT ANY TIME.</span></h1>
 
       <p class="lede">
-        You are registered, and the masterclass will show you the path. But knowing the
-        path has never been the bottleneck. <strong>The experts who get booked and paid are
-        not the ones who know more. They are the ones who send the pitch, hold the room,
-        and ask for the fee.</strong> That is a different skill, and it is the one nobody sells you.
+        The masterclass will show you the path from podcast guest to paid speaker.
+        <strong>This is the part that decides whether you actually walk it.</strong>
+        Because the experts who get booked are not the ones who know more. They are the
+        ones who send the pitch, hold the room, and ask for the fee.
       </p>
+
+      <p class="tagline">Stand up · Speak up · Scale up</p>
     </div>
   </section>
 
@@ -539,202 +399,351 @@
     <p class="section-label">What it is actually costing you</p>
     <p class="section-title">Three ways this shows up on your invoice</p>
     <p class="section-sub">
-      Nobody calls it fear. It arrives disguised as being realistic, being busy, or
-      waiting until you are ready.
+      Nobody calls it fear. It arrives disguised as being realistic, being busy, or waiting
+      until you are ready.
     </p>
 
-    <div class="causes">
-      <div class="cause">
+    <div class="cards">
+      <div class="card">
         <strong>You do not pitch</strong>
         <p>
-          Danny Danger's whole job is protecting your reputation, so the email to the host
-          stays in drafts. The show that would have led to three stage invitations books
-          someone less qualified who sent it.
+          The email to the host stays in drafts. The show that would have led to three stage
+          invitations books someone less qualified who sent it.
         </p>
       </div>
-      <div class="cause">
+      <div class="card">
         <strong>You undercharge, or you go free</strong>
         <p>
-          A fee is a claim about what happens when you walk on. If you are not certain you
-          can hold the room, you will not make that claim. So you say yes to exposure and
-          call it strategy.
+          A fee is a claim about what happens when you walk on. If you are not certain you can
+          hold the room, you will not make that claim. So you say yes to exposure and call it
+          strategy.
         </p>
       </div>
-      <div class="cause">
+      <div class="card">
         <strong>You do not get rebooked</strong>
         <p>
-          Organizers rebook the speaker who was easy to watch. Nerves read from the back row
-          and they read on the recording, which is the thing that gets passed to the next
-          organizer.
+          Organizers rebook the speaker who was easy to watch. Nerves read from the back row,
+          and they read on the recording that gets passed to the next organizer.
         </p>
       </div>
     </div>
 
-    <p class="section-label">First, the diagnosis</p>
-    <p class="section-title">Why your body treats a stage like a threat</p>
-    <p class="section-sub">
-      Three things put it there. None of them are a character flaw, and all three
-      can be worked with once you can name them.
-    </p>
+    <p class="section-label">Is this you?</p>
+    <p class="section-title">Any of these sound familiar</p>
 
-    <div class="causes">
-      <div class="cause">
-        <strong>Past experience</strong>
-        <p>
-          An emotional association formed earlier, and it does not have to be yours.
-          Watching one person get humiliated in front of a room is enough for your
-          brain to file speaking under dangerous, permanently.
-        </p>
+    <div class="list">
+      <div class="list-item">
+        <span class="icon no">&#10005;</span>
+        <span>You want to say yes to speaking opportunities, but the moment you imagine being on stage you think <strong>"I'm not ready yet."</strong></span>
       </div>
-      <div class="cause">
-        <strong>Human wiring</strong>
-        <p>
-          You are built to survive, not to thrive. Your nervous system reads being
-          judged, laughed at or dismissed as a genuine survival threat. The fear is
-          not irrational, it is the system working exactly as designed. The job is not
-          to fix your wiring, it is to update its threat assessment.
-        </p>
+      <div class="list-item">
+        <span class="icon no">&#10005;</span>
+        <span>Even when you do speak, it feels like <strong>survival, not something you enjoy.</strong></span>
       </div>
-      <div class="cause">
-        <strong>Lack of practice</strong>
-        <p>
-          Unfamiliar reads as dangerous. Your body cannot tell the difference between
-          "I have never done this" and "this will kill me". Reps are what close that gap.
-        </p>
+      <div class="list-item">
+        <span class="icon no">&#10005;</span>
+        <span>You compare yourself to confident speakers and wonder <strong>"how do they do that?"</strong></span>
+      </div>
+      <div class="list-item">
+        <span class="icon no">&#10005;</span>
+        <span>You are afraid of forgetting your words, saying "uhm" too often, being judged, or just <strong>freezing in the moment.</strong></span>
+      </div>
+      <div class="list-item">
+        <span class="icon no">&#10005;</span>
+        <span>You feel <strong>overwhelmed by the pressure</strong> that comes with being on stage.</span>
+      </div>
+      <div class="list-item">
+        <span class="icon no">&#10005;</span>
+        <span>You have started to believe <strong>speaking just isn't for you</strong>, even though you secretly dream of it.</span>
       </div>
     </div>
 
-    <p class="section-label">Then, the mechanism</p>
-    <p class="section-title">The three voices talking you out of it</p>
-    <p class="section-sub">
-      They show up every time you are about to do something that feels risky. They are
-      not your enemies. They are protection systems doing their job with badly outdated
-      information.
-    </p>
-
-    <div class="voices">
-      <div class="voice">
-        <span class="voice-tag">D</span>
-        <div class="voice-body">
-          <strong>Danny Danger</strong>
-          <p>
-            Scans for threats to your safety, reputation and belonging. He is the one
-            asking what if they laugh, what if I fail in front of everyone I know.
-          </p>
-        </div>
-      </div>
-      <div class="voice">
-        <span class="voice-tag">L</span>
-        <div class="voice-body">
-          <strong>Lazy Larry</strong>
-          <p>
-            Your energy accountant. He avoids anything that costs more than it returns,
-            and speaking is high effort with an uncertain reward. Larry asks whether this
-            is really necessary.
-          </p>
-        </div>
-      </div>
-      <div class="voice">
-        <span class="voice-tag">C</span>
-        <div class="voice-body">
-          <strong>Consistent Chris</strong>
-          <p>
-            The keeper of predictability. Anything new is a threat to Chris, whether or
-            not it is good for you. He is why the comfortable version of your career keeps
-            winning.
-          </p>
-        </div>
-      </div>
-    </div>
-
-    <div class="pull">
-      You do not fight them, you negotiate. Suppress these voices and they get louder.
-      Acknowledge what they are protecting, then show them evidence that the new
-      behaviour serves the same goal. With reps, the data changes and they quiet down.
-    </div>
+    <a class="btn btn-inline" href="#offer">Unlock Confidence to Speak</a>
 
     <div class="divider"></div>
+
+    <p class="section-label">People think I'm a natural</p>
+    <p class="section-title">That is absolute bullsh*t</p>
+    <p class="section-sub">
+      I built this because I needed it first. Here is what changed, and it was not talent.
+    </p>
+
+    <div class="ba">
+      <div class="ba-col before">
+        <p class="ba-head">Before speaking confidence</p>
+        <ul>
+          <li><strong>Dreaming</strong>of a profitable business and standing on stages, from a distance.</li>
+          <li><strong>Afraid</strong>to share my message, and not even sure I was actually good enough.</li>
+          <li><strong>Overthinking</strong>my English accent, coming from the Netherlands.</li>
+        </ul>
+      </div>
+      <div class="ba-col after">
+        <p class="ba-head">After speaking confidence</p>
+        <ul>
+          <li><strong>Two to four speaking events a week</strong>all around the world, in still imperfect English.</li>
+          <li><strong>Shared the stage with industry goats</strong>Dean Graziosi, Brendon Burchard and Nick Santonastasso.</li>
+          <li><strong>Traveling the world</strong>while doing what I love.</li>
+        </ul>
+      </div>
+    </div>
 
     <p class="section-label">What you get</p>
     <p class="section-title">Confidence to Speak</p>
     <p class="section-sub">
-      The course Laurie normally runs only at live events, now as pre-work for your
-      masterclass. Do this first and you arrive able to act on what you learn, instead of
-      writing another pitch you never send.
+      Ten videos, each between five and twenty minutes. Self-paced, watch them whenever it
+      suits you and as often as you like. You could go through everything in one afternoon.
     </p>
 
-    <div class="includes">
-      <div class="include">
-        <span class="tick">&#10003;</span>
-        <div class="text">
-          <strong>The psychology of speaking fear</strong>
-          <p>Where it comes from, why it is not irrational, and what actually changes it.</p>
+    <div class="stack">
+      <div class="stack-item">
+        <div class="stack-num">01</div>
+        <div class="stack-body">
+          <strong>Speaking confidence training</strong>
+          <p>
+            A step by step proven program designed to build real, lasting confidence on any
+            stage, whatever your experience level. Confidence that stays after the course
+            finishes, not just while you are watching it.
+          </p>
         </div>
       </div>
-      <div class="include">
-        <span class="tick">&#10003;</span>
-        <div class="text">
-          <strong>The Danny, Larry and Chris method</strong>
-          <p>How to recognise which voice is running the show, and how to negotiate with each one instead of white-knuckling through.</p>
+      <div class="stack-item">
+        <div class="stack-num">02</div>
+        <div class="stack-body">
+          <strong>Fun, interactive exercises</strong>
+          <p>
+            Engaging activities that make this enjoyable and help you practise confidence in a
+            way that actually sticks. Imagine speaking being fun, including when the stakes
+            get higher.
+          </p>
         </div>
       </div>
-      <div class="include">
-        <span class="tick">&#10003;</span>
-        <div class="text">
-          <strong>The preparation framework</strong>
-          <p>Brain dump, find the one thought, build a bullet storyline, then practise in pieces. Structure first, script later, so you are never memorising your way into rigidity.</p>
-        </div>
-      </div>
-      <div class="include">
-        <span class="tick">&#10003;</span>
-        <div class="text">
-          <strong>How to practise so it sticks</strong>
-          <p>Why rehearsing in your head is not rehearsing, how to run scenes inside ordinary meetings, and what to do with the last hour before you go on.</p>
-        </div>
-      </div>
-      <div class="include">
-        <span class="tick">&#10003;</span>
-        <div class="text">
-          <strong>Podcast prep, the four questions</strong>
-          <p>Nearly every interview moves through the same four. Pre-assign a story to each one and you never improvise from a standing start again.</p>
+      <div class="stack-item">
+        <div class="stack-num">03</div>
+        <div class="stack-body">
+          <strong>Tools to calm your nerves</strong>
+          <p>
+            Easy to use techniques you can apply right away to settle nerves, prepare properly,
+            and feel mentally ready for any stage. So you can say yes to the opportunities
+            coming your way, because you know you can handle them.
+          </p>
         </div>
       </div>
     </div>
 
-    <div class="offer" id="offer-box">
-      <p class="kicker">Pre-work price, this page only</p>
+    <div class="divider"></div>
+
+    <p class="section-label">Proof</p>
+    <p class="section-title">What happens on the other side</p>
+
+    <div class="quotes">
+      <div class="quote">
+        <p>"Public speaking was my biggest fear. I can't believe I now enjoy it."</p>
+        <p class="who"><b>Sonja Zecevic</b> · Real Estate Investor</p>
+      </div>
+      <div class="quote">
+        <p>"It's not just speaking confidence. It changed my entire business."</p>
+        <p class="who"><b>Mauricio Chaparro</b> · Family Business Consultant</p>
+      </div>
+      <div class="quote">
+        <p>"This gave me the push to finally launch my own podcast."</p>
+        <p class="who"><b>Flavie Berleand</b> · Business Coach</p>
+      </div>
+    </div>
+
+    <div class="story">
+      <h4>From biggest fear to unstoppable confidence</h4>
+      <p>
+        Public speaking was Noel's biggest fear. Growing up under a dictatorship, she saw her
+        uncle jailed for speaking up, and learned that staying safe meant staying silent.
+      </p>
+      <p>
+        But to grow her business, helping women 45+ live in Full Bloom through art therapy,
+        she had to step into the spotlight. Sharing her message confidently was the missing
+        piece, so she committed to mastering this framework.
+      </p>
+      <p class="result">
+        She overcame the fear, went viral with 50,000+ views, was flown in to speak, and built
+        a thriving group program.
+      </p>
+    </div>
+
+    <div class="story">
+      <h4>From stage blackouts to spotlight breakthroughs</h4>
+      <p>
+        Public speaking was Isla's biggest fear. A corporate leader turned parenting coach, she
+        knew her work mattered, but extreme stage blackouts kept shutting her down.
+      </p>
+      <p class="result">
+        Now Isla speaks with complete confidence and sends me one speaking video after another.
+        Better still, she likes herself in them and enjoys the process.
+      </p>
+    </div>
+
+    <div class="story">
+      <h4>This exact material got</h4>
+      <p>
+        <strong>Linda</strong> the realization that her dream of becoming a speaker is entirely
+        possible. Years of caring for everyone else, and a hard burnout, had kept her silent.
+        Now she owns the mic and says "Laurie, I realize I'm cool!"
+      </p>
+      <p>
+        <strong>Leslie</strong> the confidence to share her story without shutting down. Her
+        biggest fear was losing control of her emotions, so she stayed silent or kept it
+        surface level. Now she creates powerful moments on stage and gets paid for it.
+      </p>
+      <p>
+        <strong>Eamon</strong> the courage to show up authentically on social media instead of
+        the persona he thought people wanted. That freedom led to a speaking opportunity in
+        front of 10,000 people, and he felt completely ready for it.
+      </p>
+    </div>
+
+    <a class="btn btn-inline" href="#offer">Unlock Confidence to Speak</a>
+
+    <div class="divider"></div>
+
+    <p class="section-label">The shift</p>
+    <p class="section-title">No more</p>
+
+    <div class="list">
+      <div class="list-item">
+        <span class="icon no">&#10005;</span>
+        <span>Avoiding opportunities because you are "not ready yet"</span>
+      </div>
+      <div class="list-item">
+        <span class="icon no">&#10005;</span>
+        <span>Rehearsing a hundred times and still feeling unsure</span>
+      </div>
+      <div class="list-item">
+        <span class="icon no">&#10005;</span>
+        <span>Comparing yourself to everyone else on stage</span>
+      </div>
+    </div>
+
+    <p class="section-title" style="margin-bottom: 24px;">With Confidence to Speak, you will</p>
+
+    <div class="list">
+      <div class="list-item">
+        <span class="icon yes">&#10003;</span>
+        <span><strong>Say yes to opportunities</strong> without second-guessing yourself, including the last-minute ones.</span>
+      </div>
+      <div class="list-item">
+        <span class="icon yes">&#10003;</span>
+        <span><strong>Know exactly what to do when nerves hit</strong>, and how to bounce back fast.</span>
+      </div>
+      <div class="list-item">
+        <span class="icon yes">&#10003;</span>
+        <span>Feel a deep sense of <strong>"I can handle this"</strong>, whatever the size of the stage.</span>
+      </div>
+      <div class="list-item">
+        <span class="icon yes">&#10003;</span>
+        <span><strong>Stop hiding behind your slides</strong>, and actually enjoy sharing your message.</span>
+      </div>
+      <div class="list-item">
+        <span class="icon yes">&#10003;</span>
+        <span><strong>Know what to say</strong> when someone calls your name.</span>
+      </div>
+    </div>
+
+    <div class="offer" id="offer">
+      <p class="kicker">Registrant price, this page only</p>
       <h3>Confidence to Speak</h3>
 
-      <div class="price-row">
-        <span class="price-old" id="price-old">&euro;149</span>
-        <span class="price-new grad-text" id="price-new">&euro;22</span>
-      </div>
-      <p class="price-note">One payment, lifetime access, in your inbox today so you can do it before we go live.</p>
+      <div id="buy-wrap">
+        <div class="price-row">
+          <span class="price-old" id="price-old">&euro;149</span>
+          <span class="price-new grad-text" id="price-new">&euro;22</span>
+        </div>
+        <p class="price-note">One payment, lifetime access, yours the moment you finish checkout.</p>
 
-      <a class="btn" id="buy-btn" href="#">Yes, I want to arrive ready</a>
+        <a class="btn" id="buy-btn" href="#">Yes, I want to arrive ready</a>
 
-      <p class="btn-note">
-        Secure checkout. You will land on your confirmation page straight after.
-      </p>
+        <p class="btn-note">
+          Secure checkout. Immediate access, so you can do this before the masterclass.
+        </p>
 
-      <div class="config-warning" id="config-warning">
-        <strong>Setup not finished.</strong> No checkout link is configured yet, so this
-        button is deliberately inert. Set CHECKOUT_URL in the script at the bottom of
-        this file before sending anyone here.
+        <div class="config-warning" id="config-warning">
+          <strong>Setup not finished.</strong> No checkout link is configured yet, so this
+          button is deliberately inert. Set CHECKOUT_URL in the script at the bottom of this
+          file before sending anyone here.
+        </div>
       </div>
     </div>
 
     <div class="expired" id="expired-box" hidden>
       <h3>That one is gone</h3>
       <p>
-        The pre-work price has expired. Confidence to Speak is still available at its
-        normal price of &euro;149, and your masterclass seat is safe either way.
+        The registrant price has expired. Confidence to Speak is still available at its normal
+        price of &euro;149, and your masterclass seat is safe either way.
       </p>
       <a class="btn" href="/special-opportunity/">Continue to my confirmation</a>
     </div>
 
+    <div class="guarantee">
+      <strong>100% money back guarantee</strong>
+      <p>
+        You have made it this far, which means you know this is what you need. To make the
+        decision easier: dive into a few lessons, and if it is not the right fit, we will
+        gladly give you a full, no hassle refund within 14 days of purchase.
+      </p>
+    </div>
+
+    <p class="section-label">You have questions</p>
+    <p class="section-title">I've got answers</p>
+
+    <div class="faq">
+      <details>
+        <summary>What happens after I commit?</summary>
+        <p>You get immediate access, so you can start right away and be ready before the masterclass.</p>
+      </details>
+
+      <details>
+        <summary>What exactly do I learn?</summary>
+        <p>Everything you need to share your message with confidence, even if you are not sure what your message is yet. The exact steps and tools to:</p>
+        <ul>
+          <li>Manage your nerves, especially in high-pressure moments</li>
+          <li>Feel calm, grounded and mentally ready before any speaking opportunity</li>
+          <li>Rewire the fear of being judged or feeling not good enough</li>
+          <li>Stay present and connected, even when everybody is looking at you</li>
+          <li>Stop overthinking and speak with natural confidence</li>
+          <li>Handle blackouts, mind blanks and a racing heartbeat with ease</li>
+        </ul>
+        <p>And you carry that confidence into every other part of your life and business.</p>
+      </details>
+
+      <details>
+        <summary>Is this live, or can I do it on my own?</summary>
+        <p>On your own, in your own time, at your own pace. Watch the videos whenever it suits you, as often as you like.</p>
+      </details>
+
+      <details>
+        <summary>How much time do I need?</summary>
+        <p>Ten videos, each between five and twenty minutes, so you could watch everything in one afternoon. The real value is in practising the exercises, so it is as much time as you want to give it. You can revisit it any time you need a boost.</p>
+      </details>
+
+      <details>
+        <summary>I'm super nervous about speaking. Is this for beginners?</summary>
+        <p>Yes, especially then. This shows you why you are nervous and how to become confident, even if you do not yet believe that is possible for you. You do not have to be perfect. You just have to start.</p>
+      </details>
+
+      <details>
+        <summary>I already speak sometimes. Will this still help me?</summary>
+        <p>Yes. You will find out exactly how to level up, so you feel unstoppable every time you step on any stage, including when the stakes get higher.</p>
+      </details>
+
+      <details>
+        <summary>What if I'm not trying to become a professional speaker?</summary>
+        <p>That is completely fine. Confidence is not just for big stages. It is for Instagram Lives, team meetings, client calls, community events, anywhere you want to speak with ease instead of overthinking.</p>
+      </details>
+
+      <details>
+        <summary>Is this just mindset, or do I get practical tools?</summary>
+        <p>Both. You work on mindset, because confidence starts there. But you also get practical, repeatable tools you can use any time: before you speak on stage, before a meeting, or when nerves hit mid-sentence.</p>
+      </details>
+    </div>
+
     <div class="skip">
-      <a href="/special-opportunity/">No thanks, take me to my confirmation</a>
+      <a href="/special-opportunity/">No thanks, take me back to my confirmation</a>
     </div>
   </div>
 
@@ -749,41 +758,30 @@
   <script>
     (function () {
       /* ────────────────────────────────────────────────────────────────
-         OFFER CONFIG. This is the only block that should need editing.
+         OFFER CONFIG. The condensed version of this offer lives on
+         /special-opportunity/ and has its own copy of these settings.
+         Keep the two in step.
          ──────────────────────────────────────────────────────────────── */
       var OFFER = {
-        // Stripe payment link. Until this is set, the buy button will not
-        // navigate and the page shows a setup warning instead.
         CHECKOUT_URL: 'https://lauriemabelis.com/confidenceblueprint-payment',
-
-        // Displayed prices. Keep the currency symbol in the string.
         PRICE_NOW: '€22',
         PRICE_WAS: '€149',
-
-        // How long the registrant price stands, in minutes.
         MINUTES: 15,
-
-        // Where "no thanks" and the expired state send people.
-        THANKYOU_URL: '/special-opportunity/',
-
-        // Storage key. Change it to re-open the offer for everyone.
-        KEY: 'cts-lto-deadline-v1'
+        KEY: 'cts-longform-deadline-v1'
       };
       /* ──────────────────────────────────────────────────────────────── */
 
-      var clock     = document.getElementById('clock');
-      var timerBar  = document.getElementById('timer-bar');
-      var offerBox  = document.getElementById('offer-box');
-      var expired   = document.getElementById('expired-box');
-      var buyBtn    = document.getElementById('buy-btn');
-      var warning   = document.getElementById('config-warning');
+      var clock    = document.getElementById('clock');
+      var timerBar = document.getElementById('timer-bar');
+      var buyWrap  = document.getElementById('buy-wrap');
+      var expired  = document.getElementById('expired-box');
+      var buyBtn   = document.getElementById('buy-btn');
+      var warning  = document.getElementById('config-warning');
 
       document.getElementById('price-new').textContent = OFFER.PRICE_NOW;
       document.getElementById('price-old').textContent = OFFER.PRICE_WAS;
 
-      /* ── Checkout wiring ──
-         An unset link must never look like a working button, so we block the
-         click and say why rather than sending someone to a dead end. */
+      /* An unset link must never look like a working button. */
       if (OFFER.CHECKOUT_URL) {
         buyBtn.href = OFFER.CHECKOUT_URL;
       } else {
@@ -791,16 +789,14 @@
         buyBtn.addEventListener('click', function (e) { e.preventDefault(); });
       }
 
-      /* ── Countdown ──
-         The deadline is stored, so a refresh does not hand out a fresh 15
-         minutes. Storage can throw in private windows, so every access is
-         guarded and the page stays usable if it fails. */
-      function readDeadline() {
+      /* Storage throws in some private windows, so every access is guarded
+         and the page stays usable if it fails. */
+      function read() {
         try { return parseInt(localStorage.getItem(OFFER.KEY), 10) || null; }
         catch (err) { return null; }
       }
 
-      function writeDeadline(ts) {
+      function write(ts) {
         try { localStorage.setItem(OFFER.KEY, String(ts)); } catch (err) {}
       }
 
@@ -808,16 +804,10 @@
         try { localStorage.removeItem(OFFER.KEY); } catch (err) {}
       }
 
-      var deadline = readDeadline();
+      var deadline = read();
       if (!deadline) {
         deadline = Date.now() + OFFER.MINUTES * 60 * 1000;
-        writeDeadline(deadline);
-      }
-
-      function expire() {
-        offerBox.hidden = true;
-        expired.hidden = false;
-        timerBar.hidden = true;
+        write(deadline);
       }
 
       function tick() {
@@ -825,7 +815,9 @@
 
         if (left <= 0) {
           clock.textContent = '00:00';
-          expire();
+          buyWrap.hidden = true;
+          expired.hidden = false;
+          timerBar.hidden = true;
           return;
         }
 
