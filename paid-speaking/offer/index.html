@@ -1,0 +1,808 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>One Time Offer · Confidence to Speak</title>
+  <meta name="description" content="A registrant-only price on Confidence to Speak. The psychology of speaking fear, and how to work with it instead of against it." />
+  <meta name="robots" content="noindex" />
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Montserrat:wght@600;700;800;900&family=Inter:wght@400;500&display=swap" rel="stylesheet" />
+
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    /* Explicit display rules below would otherwise beat the hidden attribute. */
+    [hidden] { display: none !important; }
+
+    :root {
+      --bg:        #000321;
+      --bg-alt:    #0D1029;
+      --ink:       #FFFFFF;
+      --ink-2:     #B7C2CC;
+      --accent:    #FF6C00;
+      --accent-dk: #E55F00;
+      --cta:       #FF6240;
+      --border:    rgba(255, 108, 0, 0.12);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', system-ui, sans-serif;
+      background: var(--bg);
+      color: var(--ink);
+      -webkit-font-smoothing: antialiased;
+      overflow-x: hidden;
+    }
+
+    .wrap {
+      width: 100%;
+      max-width: 720px;
+      margin-inline: auto;
+      padding-inline: 24px;
+    }
+
+    /* ── STICKY COUNTDOWN ── */
+    .timer-bar {
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      width: 100%;
+      background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
+      padding: 10px 24px;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    .timer-bar .label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: #000321;
+    }
+
+    .timer-bar .clock {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1.05rem;
+      font-weight: 800;
+      color: #fff;
+      background: rgba(0, 3, 33, 0.55);
+      border-radius: 8px;
+      padding: 3px 12px;
+      font-variant-numeric: tabular-nums;
+      min-width: 78px;
+    }
+
+    /* ── HERO ── */
+    .hero {
+      padding: 40px 0 36px;
+      text-align: center;
+    }
+
+    .check-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.4);
+      border-radius: 9999px;
+      padding: 8px 20px;
+      margin-bottom: 24px;
+    }
+
+    .check-badge .mark {
+      width: 18px;
+      height: 18px;
+      border-radius: 9999px;
+      background: #10B981;
+      color: #fff;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.68rem;
+      font-weight: 700;
+      flex-shrink: 0;
+    }
+
+    .check-badge span.label {
+      font-size: 0.82rem;
+      font-weight: 500;
+      color: var(--ink);
+    }
+
+    .hero-title {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: clamp(2.1rem, 8vw, 3.2rem);
+      font-weight: 800;
+      line-height: 1.05;
+      letter-spacing: -0.01em;
+      margin-bottom: 14px;
+    }
+
+    .grad-text {
+      background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .hero p.lede {
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--ink-2);
+      line-height: 1.65;
+      max-width: 520px;
+      margin: 0 auto;
+    }
+
+    .hero p.lede strong { color: var(--ink); font-weight: 600; }
+
+    /* ── PULL QUOTE ── */
+    .pull {
+      background: var(--bg-alt);
+      border-left: 3px solid var(--accent);
+      border-radius: 0 14px 14px 0;
+      padding: 20px 24px;
+      margin: 36px 0;
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1.08rem;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    /* ── SECTIONS ── */
+    .divider {
+      width: 48px;
+      height: 3px;
+      background: linear-gradient(90deg, #FF6C00, #FF6240);
+      border-radius: 9999px;
+      margin: 0 auto 36px;
+    }
+
+    .section-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.76rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      text-align: center;
+      margin-bottom: 8px;
+    }
+
+    .section-title {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: clamp(1.4rem, 4.5vw, 1.9rem);
+      font-weight: 700;
+      text-align: center;
+      line-height: 1.2;
+      margin-bottom: 14px;
+    }
+
+    .section-sub {
+      font-size: 0.98rem;
+      color: var(--ink-2);
+      line-height: 1.6;
+      text-align: center;
+      max-width: 520px;
+      margin: 0 auto 36px;
+    }
+
+    /* ── CAUSE CARDS ── */
+    .causes {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 56px;
+    }
+
+    .cause {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+    }
+
+    .cause strong {
+      display: block;
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1.02rem;
+      font-weight: 700;
+      margin-bottom: 6px;
+    }
+
+    .cause p {
+      font-size: 0.92rem;
+      color: var(--ink-2);
+      line-height: 1.6;
+    }
+
+    /* ── VOICES ── */
+    .voices {
+      display: grid;
+      gap: 14px;
+      margin-bottom: 28px;
+    }
+
+    .voice {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 20px 22px;
+      display: flex;
+      gap: 16px;
+      align-items: flex-start;
+    }
+
+    .voice-tag {
+      flex-shrink: 0;
+      width: 42px;
+      height: 42px;
+      border-radius: 12px;
+      background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.15rem;
+      font-weight: 900;
+      color: #fff;
+    }
+
+    .voice-body strong {
+      display: block;
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1.02rem;
+      font-weight: 700;
+      margin-bottom: 5px;
+    }
+
+    .voice-body p {
+      font-size: 0.92rem;
+      color: var(--ink-2);
+      line-height: 1.6;
+    }
+
+    /* ── INCLUDES ── */
+    .includes {
+      display: flex;
+      flex-direction: column;
+      gap: 2px;
+      margin-bottom: 40px;
+    }
+
+    .include {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      padding: 14px 0;
+      border-bottom: 1px solid var(--border);
+    }
+
+    .include:last-child { border-bottom: none; }
+
+    .include .tick {
+      flex-shrink: 0;
+      width: 22px;
+      height: 22px;
+      border-radius: 9999px;
+      background: rgba(255, 108, 0, 0.15);
+      border: 1px solid rgba(255, 108, 0, 0.45);
+      color: var(--accent);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 0.7rem;
+      font-weight: 700;
+      margin-top: 2px;
+    }
+
+    .include .text { flex: 1; }
+
+    .include .text strong {
+      display: block;
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 0.98rem;
+      font-weight: 700;
+      margin-bottom: 3px;
+    }
+
+    .include .text p {
+      font-size: 0.88rem;
+      color: var(--ink-2);
+      line-height: 1.55;
+    }
+
+    /* ── OFFER BOX ── */
+    .offer {
+      background: var(--bg-alt);
+      border: 1px solid rgba(255, 108, 0, 0.35);
+      border-radius: 20px;
+      padding: 32px 28px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .offer .kicker {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.72rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
+    .offer h3 {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: clamp(1.5rem, 5vw, 2rem);
+      font-weight: 800;
+      margin-bottom: 18px;
+    }
+
+    .price-row {
+      display: flex;
+      align-items: baseline;
+      justify-content: center;
+      gap: 14px;
+      margin-bottom: 8px;
+      flex-wrap: wrap;
+    }
+
+    .price-old {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 600;
+      color: var(--ink-2);
+      text-decoration: line-through;
+      text-decoration-color: var(--cta);
+      text-decoration-thickness: 2px;
+    }
+
+    .price-new {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: clamp(2.6rem, 11vw, 3.6rem);
+      font-weight: 800;
+      line-height: 1;
+    }
+
+    .price-note {
+      font-size: 0.86rem;
+      color: var(--ink-2);
+      margin-bottom: 24px;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 8px;
+      padding: 16px 32px;
+      background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
+      color: #fff;
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      border-radius: 9999px;
+      text-decoration: none;
+      border: none;
+      cursor: pointer;
+      transition: opacity 0.2s, transform 0.2s;
+      width: 100%;
+      max-width: 380px;
+    }
+
+    .btn:hover { opacity: 0.92; transform: translateY(-1px); }
+
+    .btn-note {
+      font-size: 0.8rem;
+      color: var(--ink-2);
+      margin-top: 14px;
+      line-height: 1.5;
+    }
+
+    .config-warning {
+      display: none;
+      background: rgba(255, 98, 64, 0.12);
+      border: 1px solid rgba(255, 98, 64, 0.5);
+      border-radius: 10px;
+      padding: 12px 16px;
+      margin-top: 16px;
+      font-size: 0.85rem;
+      color: #FFB4A0;
+      line-height: 1.5;
+      text-align: left;
+    }
+
+    /* ── SKIP ── */
+    .skip {
+      text-align: center;
+      padding-bottom: 48px;
+    }
+
+    .skip a {
+      font-size: 0.88rem;
+      color: var(--ink-2);
+      text-decoration: underline;
+      text-underline-offset: 3px;
+    }
+
+    .skip a:hover { color: var(--ink); }
+
+    /* ── EXPIRED STATE ── */
+    .expired {
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 20px;
+      padding: 32px 28px;
+      text-align: center;
+      margin-bottom: 20px;
+    }
+
+    .expired h3 {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1.4rem;
+      font-weight: 700;
+      margin-bottom: 12px;
+    }
+
+    .expired p {
+      font-size: 0.95rem;
+      color: var(--ink-2);
+      line-height: 1.6;
+      margin-bottom: 22px;
+    }
+
+    /* ── FOOTER ── */
+    footer {
+      border-top: 1px solid var(--border);
+      padding: 32px 0 40px;
+      text-align: center;
+    }
+
+    footer p {
+      font-size: 0.8rem;
+      color: var(--ink-2);
+      line-height: 1.6;
+    }
+
+    footer a { color: var(--accent); text-decoration: none; }
+
+    /* ── MOBILE ── */
+    @media (max-width: 600px) {
+      .wrap { padding-inline: 16px; }
+      .timer-bar { padding: 8px 16px; gap: 8px; }
+      .timer-bar .label { font-size: 0.62rem; letter-spacing: 0.08em; }
+      .hero { padding: 30px 0 28px; }
+      .hero-title { font-size: clamp(1.9rem, 9vw, 2.4rem); }
+      .pull { padding: 16px 18px; font-size: 1rem; margin: 28px 0; }
+      .cause, .voice { padding: 16px 18px; }
+      .offer, .expired { padding: 26px 18px; }
+      .btn { padding: 15px 24px; font-size: 0.95rem; }
+    }
+  </style>
+</head>
+<body>
+
+  <!--
+    ONE TIME OFFER page. Sits between the registration form and the thank-you page:
+      GHL form submit  ->  /paid-speaking/offer/  ->  /paid-speaking/thankyou/
+
+    Everything commercial lives in the OFFER config block in the script at the
+    bottom of this file. Set CHECKOUT_URL to the Stripe payment link before this
+    page goes into the flow, or the buy button will refuse to navigate and show
+    a warning instead.
+
+    Add ?reset to the URL to clear an expired countdown while testing.
+  -->
+
+  <div class="timer-bar" id="timer-bar">
+    <span class="label">This price disappears when you leave</span>
+    <span class="clock" id="clock">15:00</span>
+  </div>
+
+  <section class="hero">
+    <div class="wrap">
+      <div class="check-badge">
+        <span class="mark">&#10003;</span>
+        <span class="label">Your seat is saved</span>
+      </div>
+
+      <h1 class="hero-title">WAIT. ONE <span class="grad-text">THING FIRST.</span></h1>
+
+      <p class="lede">
+        You are registered, and the masterclass will show you the path. But there is
+        a reason most experts never walk it, and it has nothing to do with strategy.
+        <strong>It is what happens in your body the moment it is your turn to speak.</strong>
+      </p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="pull">
+      You can know exactly what to say and still not say it. Fear does not wait for
+      you to be unqualified.
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="section-label">First, the diagnosis</p>
+    <p class="section-title">Why your body treats a stage like a threat</p>
+    <p class="section-sub">
+      Three things put it there. None of them are a character flaw, and all three
+      can be worked with once you can name them.
+    </p>
+
+    <div class="causes">
+      <div class="cause">
+        <strong>Past experience</strong>
+        <p>
+          An emotional association formed earlier, and it does not have to be yours.
+          Watching one person get humiliated in front of a room is enough for your
+          brain to file speaking under dangerous, permanently.
+        </p>
+      </div>
+      <div class="cause">
+        <strong>Human wiring</strong>
+        <p>
+          You are built to survive, not to thrive. Your nervous system reads being
+          judged, laughed at or dismissed as a genuine survival threat. The fear is
+          not irrational, it is the system working exactly as designed. The job is not
+          to fix your wiring, it is to update its threat assessment.
+        </p>
+      </div>
+      <div class="cause">
+        <strong>Lack of practice</strong>
+        <p>
+          Unfamiliar reads as dangerous. Your body cannot tell the difference between
+          "I have never done this" and "this will kill me". Reps are what close that gap.
+        </p>
+      </div>
+    </div>
+
+    <p class="section-label">Then, the mechanism</p>
+    <p class="section-title">The three voices talking you out of it</p>
+    <p class="section-sub">
+      They show up every time you are about to do something that feels risky. They are
+      not your enemies. They are protection systems doing their job with badly outdated
+      information.
+    </p>
+
+    <div class="voices">
+      <div class="voice">
+        <span class="voice-tag">D</span>
+        <div class="voice-body">
+          <strong>Danny Danger</strong>
+          <p>
+            Scans for threats to your safety, reputation and belonging. He is the one
+            asking what if they laugh, what if I fail in front of everyone I know.
+          </p>
+        </div>
+      </div>
+      <div class="voice">
+        <span class="voice-tag">L</span>
+        <div class="voice-body">
+          <strong>Lazy Larry</strong>
+          <p>
+            Your energy accountant. He avoids anything that costs more than it returns,
+            and speaking is high effort with an uncertain reward. Larry asks whether this
+            is really necessary.
+          </p>
+        </div>
+      </div>
+      <div class="voice">
+        <span class="voice-tag">C</span>
+        <div class="voice-body">
+          <strong>Consistent Chris</strong>
+          <p>
+            The keeper of predictability. Anything new is a threat to Chris, whether or
+            not it is good for you. He is why the comfortable version of your career keeps
+            winning.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <div class="pull">
+      You do not fight them, you negotiate. Suppress these voices and they get louder.
+      Acknowledge what they are protecting, then show them evidence that the new
+      behaviour serves the same goal. With reps, the data changes and they quiet down.
+    </div>
+
+    <div class="divider"></div>
+
+    <p class="section-label">What you get</p>
+    <p class="section-title">Confidence to Speak</p>
+    <p class="section-sub">
+      The course Laurie normally runs only at live events. It is the inner work that has
+      to happen before any framework for getting booked can do anything for you.
+    </p>
+
+    <div class="includes">
+      <div class="include">
+        <span class="tick">&#10003;</span>
+        <div class="text">
+          <strong>The psychology of speaking fear</strong>
+          <p>Where it comes from, why it is not irrational, and what actually changes it.</p>
+        </div>
+      </div>
+      <div class="include">
+        <span class="tick">&#10003;</span>
+        <div class="text">
+          <strong>The Danny, Larry and Chris method</strong>
+          <p>How to recognise which voice is running the show, and how to negotiate with each one instead of white-knuckling through.</p>
+        </div>
+      </div>
+      <div class="include">
+        <span class="tick">&#10003;</span>
+        <div class="text">
+          <strong>The preparation framework</strong>
+          <p>Brain dump, find the one thought, build a bullet storyline, then practise in pieces. Structure first, script later, so you are never memorising your way into rigidity.</p>
+        </div>
+      </div>
+      <div class="include">
+        <span class="tick">&#10003;</span>
+        <div class="text">
+          <strong>How to practise so it sticks</strong>
+          <p>Why rehearsing in your head is not rehearsing, how to run scenes inside ordinary meetings, and what to do with the last hour before you go on.</p>
+        </div>
+      </div>
+      <div class="include">
+        <span class="tick">&#10003;</span>
+        <div class="text">
+          <strong>Podcast prep, the four questions</strong>
+          <p>Nearly every interview moves through the same four. Pre-assign a story to each one and you never improvise from a standing start again.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="offer" id="offer-box">
+      <p class="kicker">Registrant price, this page only</p>
+      <h3>Confidence to Speak</h3>
+
+      <div class="price-row">
+        <span class="price-old" id="price-old">&euro;149</span>
+        <span class="price-new grad-text" id="price-new">&euro;22</span>
+      </div>
+      <p class="price-note">One payment, lifetime access, yours before the masterclass starts.</p>
+
+      <a class="btn" id="buy-btn" href="#">Yes, add it to my seat</a>
+
+      <p class="btn-note">
+        Secure checkout. You will land on your confirmation page straight after.
+      </p>
+
+      <div class="config-warning" id="config-warning">
+        <strong>Setup not finished.</strong> No checkout link is configured yet, so this
+        button is deliberately inert. Set CHECKOUT_URL in the script at the bottom of
+        this file before sending anyone here.
+      </div>
+    </div>
+
+    <div class="expired" id="expired-box" hidden>
+      <h3>That one is gone</h3>
+      <p>
+        The registrant price has expired. Confidence to Speak is still available at its
+        normal price of &euro;149, and your masterclass seat is safe either way.
+      </p>
+      <a class="btn" href="/paid-speaking/thankyou/">Continue to my confirmation</a>
+    </div>
+
+    <div class="skip">
+      <a href="/paid-speaking/thankyou/">No thanks, take me to my confirmation</a>
+    </div>
+  </div>
+
+  <footer>
+    <div class="wrap">
+      <p>
+        &copy; 2026 Dextropreneur · <a href="mailto:laurie@dextropreneur.com">laurie@dextropreneur.com</a>
+      </p>
+    </div>
+  </footer>
+
+  <script>
+    (function () {
+      /* ────────────────────────────────────────────────────────────────
+         OFFER CONFIG. This is the only block that should need editing.
+         ──────────────────────────────────────────────────────────────── */
+      var OFFER = {
+        // Stripe payment link. Until this is set, the buy button will not
+        // navigate and the page shows a setup warning instead.
+        CHECKOUT_URL: '',
+
+        // Displayed prices. Keep the currency symbol in the string.
+        PRICE_NOW: '€22',
+        PRICE_WAS: '€149',
+
+        // How long the registrant price stands, in minutes.
+        MINUTES: 15,
+
+        // Where "no thanks" and the expired state send people.
+        THANKYOU_URL: '/paid-speaking/thankyou/',
+
+        // Storage key. Change it to re-open the offer for everyone.
+        KEY: 'cts-lto-deadline-v1'
+      };
+      /* ──────────────────────────────────────────────────────────────── */
+
+      var clock     = document.getElementById('clock');
+      var timerBar  = document.getElementById('timer-bar');
+      var offerBox  = document.getElementById('offer-box');
+      var expired   = document.getElementById('expired-box');
+      var buyBtn    = document.getElementById('buy-btn');
+      var warning   = document.getElementById('config-warning');
+
+      document.getElementById('price-new').textContent = OFFER.PRICE_NOW;
+      document.getElementById('price-old').textContent = OFFER.PRICE_WAS;
+
+      /* ── Checkout wiring ──
+         An unset link must never look like a working button, so we block the
+         click and say why rather than sending someone to a dead end. */
+      if (OFFER.CHECKOUT_URL) {
+        buyBtn.href = OFFER.CHECKOUT_URL;
+      } else {
+        warning.style.display = 'block';
+        buyBtn.addEventListener('click', function (e) { e.preventDefault(); });
+      }
+
+      /* ── Countdown ──
+         The deadline is stored, so a refresh does not hand out a fresh 15
+         minutes. Storage can throw in private windows, so every access is
+         guarded and the page stays usable if it fails. */
+      function readDeadline() {
+        try { return parseInt(localStorage.getItem(OFFER.KEY), 10) || null; }
+        catch (err) { return null; }
+      }
+
+      function writeDeadline(ts) {
+        try { localStorage.setItem(OFFER.KEY, String(ts)); } catch (err) {}
+      }
+
+      if (location.search.indexOf('reset') !== -1) {
+        try { localStorage.removeItem(OFFER.KEY); } catch (err) {}
+      }
+
+      var deadline = readDeadline();
+      if (!deadline) {
+        deadline = Date.now() + OFFER.MINUTES * 60 * 1000;
+        writeDeadline(deadline);
+      }
+
+      function expire() {
+        offerBox.hidden = true;
+        expired.hidden = false;
+        timerBar.hidden = true;
+      }
+
+      function tick() {
+        var left = deadline - Date.now();
+
+        if (left <= 0) {
+          clock.textContent = '00:00';
+          expire();
+          return;
+        }
+
+        var total = Math.floor(left / 1000);
+        var mins  = Math.floor(total / 60);
+        var secs  = total % 60;
+        clock.textContent = (mins < 10 ? '0' : '') + mins + ':' + (secs < 10 ? '0' : '') + secs;
+
+        setTimeout(tick, 1000);
+      }
+
+      tick();
+    })();
+  </script>
+</body>
+</html>
