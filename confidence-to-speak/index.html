@@ -498,7 +498,7 @@
       GHL form submit  ->  /confidence-to-speak/  ->  /special-opportunity/
 
     Everything commercial lives in the OFFER config block in the script at the
-    bottom of this file. Set CHECKOUT_URL to the Stripe payment link before this
+    bottom of this file. Set CHECKOUT_URL to the order form URL before this
     page goes into the flow, or the buy button will refuse to navigate and show
     a warning instead.
 
@@ -754,7 +754,7 @@
       var OFFER = {
         // Stripe payment link. Until this is set, the buy button will not
         // navigate and the page shows a setup warning instead.
-        CHECKOUT_URL: '',
+        CHECKOUT_URL: 'https://lauriemabelis.com/confidenceblueprint-payment',
 
         // Displayed prices. Keep the currency symbol in the string.
         PRICE_NOW: '€22',
