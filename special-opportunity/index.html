@@ -924,7 +924,27 @@
       var endUTC = '20260930T150000Z';
       var title = 'The Path to Paid Speaking Gigs, Free Masterclass';
       var zoomLink = 'https://us06web.zoom.us/j/2106199726';
-      var details = 'Live masterclass with Laurie Mabelis. Podcasts as your fastest way into paid speaking gigs. Join here: ' + zoomLink;
+      // Mirrors the three learn items on the sign-up page. Keep them in sync.
+      var detailLines = [
+        'YOUR ZOOM LINK FOR THIS EPIC EXPERIENCE:',
+        zoomLink,
+        '',
+        'YOU LEARN:',
+        '',
+        'A clear path from podcast guest to paid speaker',
+        'How to use podcast interviews to build the visibility, authority and proof that event organizers look for, and how the monetization works, so those invitations turn into real, paid speaking fees.',
+        '',
+        'A simple way to start landing interviews',
+        'How to find the right podcasts, approach their hosts, and turn one great conversation into more interviews and bigger stages.',
+        '',
+        'The real reason you are not getting booked',
+        'It is probably not your experience, your audience size or your connections. Learn what podcast hosts actually look for, and the shift that makes your pitch much easier to say yes to.',
+        '',
+        'See you on September 30, 4 to 5 PM CET.'
+      ];
+      var details = detailLines.join('\n');
+      // ICS escapes newlines as a literal backslash-n, per RFC 5545.
+      var icsDetails = detailLines.join('\\n');
 
       var gcalUrl = 'https://calendar.google.com/calendar/render?action=TEMPLATE'
         + '&text=' + encodeURIComponent(title)
@@ -940,7 +960,7 @@
         'DTSTART:' + startUTC,
         'DTEND:' + endUTC,
         'SUMMARY:' + title,
-        'DESCRIPTION:' + details,
+        'DESCRIPTION:' + icsDetails,
         'LOCATION:' + zoomLink,
         'URL:' + zoomLink,
         'END:VEVENT',
