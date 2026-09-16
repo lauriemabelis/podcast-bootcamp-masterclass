@@ -236,33 +236,6 @@
       padding-bottom: 0;
     }
 
-    .step:not(:last-child)::before {
-      content: '';
-      position: absolute;
-      left: 21px;
-      top: 44px;
-      bottom: 0;
-      width: 2px;
-      background: rgba(255, 108, 0, 0.25);
-    }
-
-    .step-num {
-      flex-shrink: 0;
-      width: 44px;
-      height: 44px;
-      border-radius: 9999px;
-      background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-family: 'Montserrat', sans-serif;
-      font-size: 1.05rem;
-      font-weight: 800;
-      color: #fff;
-      position: relative;
-      z-index: 1;
-    }
-
     .step-body {
       padding-top: 6px;
       flex: 1;
@@ -588,6 +561,64 @@
 
     .lto-expired a { color: var(--accent); text-decoration: none; }
 
+    /* ── NUMBERED STEP HEADERS (01 / 02 / 03) ── */
+    .step-head {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      text-align: left;
+      margin-bottom: 18px;
+    }
+
+    .step-head .num {
+      flex-shrink: 0;
+      width: 46px;
+      height: 46px;
+      border-radius: 9999px;
+      background: linear-gradient(135deg, #FF6C00 0%, #FF6240 100%);
+      color: #fff;
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 1rem;
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .step-head h2 {
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: clamp(1.25rem, 4vw, 1.6rem);
+      font-weight: 800;
+      line-height: 1.2;
+    }
+
+    .step-head .sub {
+      font-size: 0.88rem;
+      color: var(--ink-2);
+      line-height: 1.5;
+      margin-top: 4px;
+    }
+
+    .step-block { margin-bottom: 44px; }
+
+    /* The step 02 offer is optional, and says so out loud. */
+    .special-flag {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      background: rgba(255, 108, 0, 0.14);
+      border: 1px solid rgba(255, 108, 0, 0.45);
+      border-radius: 9999px;
+      padding: 6px 16px;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.66rem;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--accent);
+      margin-bottom: 14px;
+    }
+
     /* ── COUNTDOWN TO THE SESSION ── */
     .countdown {
       display: flex;
@@ -808,15 +839,10 @@
         padding-bottom: 28px;
       }
 
-      .step:not(:last-child)::before {
-        left: 17px;
-        top: 36px;
-      }
-
-      .step-num {
-        width: 36px;
-        height: 36px;
-        font-size: 0.9rem;
+      .step-head .num {
+        width: 38px;
+        height: 38px;
+        font-size: 0.85rem;
       }
 
       .step-body {
@@ -869,7 +895,20 @@
 
       <p class="lede">
         A confirmation email is on its way. Check your inbox, and your spam folder, just in case.
+        <strong style="color:var(--ink);display:block;margin-top:10px;">Three things to do before September 30.</strong>
       </p>
+    </div>
+  </section>
+
+  <div class="wrap">
+    <div class="step-block">
+      <div class="step-head">
+        <span class="num">01</span>
+        <div>
+          <h2>Lock it in</h2>
+          <p class="sub">Takes ten seconds, and it is the one thing that decides whether you are there.</p>
+        </div>
+      </div>
 
       <div class="confirm-card">
         <p class="label">You're registered for</p>
@@ -902,30 +941,19 @@
         </div>
       </div>
     </div>
-  </section>
 
-  <div class="wrap">
-    <div class="walkaway">
-      <p class="section-label">So you know what you're walking into</p>
-      <p class="section-title">What you'll walk away with</p>
-
-      <div class="walkaway-grid">
-        <div class="walk-item">
-          <span class="n">1</span>
-          <p><strong>The real reason you're not getting booked.</strong> It is probably not your experience, your audience size or your connections. You'll see what actually decides it.</p>
-        </div>
-        <div class="walk-item">
-          <span class="n">2</span>
-          <p><strong>A repeatable way to start landing invitations.</strong> Where to look, who to approach, and the shift that makes you much easier to say yes to.</p>
-        </div>
-        <div class="walk-item">
-          <span class="n">3</span>
-          <p><strong>How it turns into money.</strong> How one conversation becomes more invitations, bigger rooms, and real speaking fees.</p>
+    <div class="step-block">
+      <div class="step-head">
+        <span class="num">02</span>
+        <div>
+          <h2>Arrive ready</h2>
+          <p class="sub">Optional. Your seat is already safe, with or without this.</p>
         </div>
       </div>
-    </div>
 
-    <div class="lto" id="lto">
+      <p class="special-flag">Registrants only · 85% off · This page, this hour</p>
+
+      <div class="lto" id="lto">
       <p class="kicker">
         <span>Registrant price</span>
         <span class="clock" id="lto-clock">15:00</span>
@@ -989,33 +1017,59 @@
         The registrant price has expired. Confidence to Speak is still available at its normal
         price of &euro;149, and your seat for the masterclass is safe either way.
       </p>
+      </div>
     </div>
 
-    <p class="section-label">Two more things</p>
-    <p class="section-title">Make it count</p>
-
-    <div class="steps">
-      <div class="step">
-        <div class="step-num">01</div>
-        <div class="step-body">
-          <strong>Join the Facebook group</strong>
-          <p>Introduce yourself. Tell us who you are, what your big speaking goal is, and why this masterclass matters to you.</p>
-          <div class="step-actions">
-            <a class="btn" href="https://facebook.com/groups/dextropreneur" target="_blank" rel="noopener">Join the group</a>
-          </div>
+    <div class="step-block">
+      <div class="step-head">
+        <span class="num">03</span>
+        <div>
+          <h2>Get connected</h2>
+          <p class="sub">The people who get the most out of this one are never the quietest in the room.</p>
         </div>
       </div>
 
-      <div class="step">
-        <div class="step-num">02</div>
-        <div class="step-body">
-          <strong>Invite a friend</strong>
-          <p>Know an expert, coach or founder whose voice deserves to be heard? Send them this link, the journey's more fun with someone brilliant along for it.</p>
-          <div class="share-box">
-            <p class="msg-label">Copy and send this</p>
-            <p class="msg-text" id="share-copy-text">Hey! I just signed up for a free live training with Laurie Mabelis about getting booked and paid to speak. I thought of you immediately. Register here: stagemasterclass.lauriemabelis.com</p>
-            <button class="btn btn-ghost" id="share-copy-btn">Copy message</button>
+      <div class="steps">
+        <div class="step">
+          <div class="step-body">
+            <strong>Join the Facebook group</strong>
+            <p>Introduce yourself. Tell us who you are, what your big speaking goal is, and why this masterclass matters to you.</p>
+            <div class="step-actions">
+              <a class="btn" href="https://facebook.com/groups/dextropreneur" target="_blank" rel="noopener">Join the group</a>
+            </div>
           </div>
+        </div>
+
+        <div class="step">
+          <div class="step-body">
+            <strong>Bring someone with you</strong>
+            <p>Know an expert, coach or founder whose voice deserves to be heard? Send them this link, the journey's more fun with someone brilliant along for it.</p>
+            <div class="share-box">
+              <p class="msg-label">Copy and send this</p>
+              <p class="msg-text" id="share-copy-text">Hey! I just signed up for a free live training with Laurie Mabelis about getting booked and paid to speak. I thought of you immediately. Register here: stagemasterclass.lauriemabelis.com</p>
+              <button class="btn btn-ghost" id="share-copy-btn">Copy message</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="walkaway">
+      <p class="section-label">So you know what you're walking into</p>
+      <p class="section-title">What you'll walk away with</p>
+
+      <div class="walkaway-grid">
+        <div class="walk-item">
+          <span class="n">1</span>
+          <p><strong>The real reason you're not getting booked.</strong> It is probably not your experience, your audience size or your connections. You'll see what actually decides it.</p>
+        </div>
+        <div class="walk-item">
+          <span class="n">2</span>
+          <p><strong>A repeatable way to start landing invitations.</strong> Where to look, who to approach, and the shift that makes you much easier to say yes to.</p>
+        </div>
+        <div class="walk-item">
+          <span class="n">3</span>
+          <p><strong>How it turns into money.</strong> How one conversation becomes more invitations, bigger rooms, and real speaking fees.</p>
         </div>
       </div>
     </div>
