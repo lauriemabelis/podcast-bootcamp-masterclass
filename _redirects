@@ -2,6 +2,13 @@
 # Everything below keeps previously shared links alive. 302 throughout, so
 # any of them can be repointed later without fighting browser caches.
 
+# The GHL registration form (XSLrQyyfoYPDvzQl9YK6) is set to redirect to
+# /thankyou, a page that does not exist, so every signup landed on the 404.
+# These two lines carry them to the real confirmation page. Fix the form
+# setting in GHL to point straight at /special-opportunity/ and these can go.
+/thankyou                 /special-opportunity/      302
+/thankyou/                /special-opportunity/      302
+
 /2                        /                          302
 /paid-speaking            /                          302
 /paid-speaking/           /                          302
