@@ -4,7 +4,13 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>You're In · The Path to Paid Speaking Gigs</title>
-  <meta name="description" content="You're registered for The Path to Paid Speaking Gigs masterclass. Here's what to do next." />
+  <meta name="description" content="You're registered for The Path to Paid Speaking Gigs. Here's what to do next." />
+
+  <meta property="og:title" content="You're In · The Path to Paid Speaking Gigs" />
+  <meta property="og:description" content="You're registered. Here's what to do next." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://stagemasterclass.lauriemabelis.com/special-opportunity/" />
+  <meta name="twitter:card" content="summary" />
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -582,10 +588,191 @@
 
     .lto-expired a { color: var(--accent); text-decoration: none; }
 
+    /* ── COUNTDOWN TO THE SESSION ── */
+    .countdown {
+      display: flex;
+      gap: 10px;
+      margin-top: 22px;
+    }
+
+    .cd-unit {
+      flex: 1;
+      background: rgba(255, 108, 0, 0.08);
+      border: 1px solid var(--border);
+      border-radius: 12px;
+      padding: 12px 6px;
+      text-align: center;
+    }
+
+    .cd-num {
+      display: block;
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: clamp(1.4rem, 5vw, 1.9rem);
+      font-weight: 800;
+      line-height: 1;
+      color: var(--ink);
+      font-variant-numeric: tabular-nums;
+    }
+
+    .cd-label {
+      display: block;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.62rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+      margin-top: 6px;
+    }
+
+    .cd-live {
+      margin-top: 22px;
+      background: rgba(16, 185, 129, 0.1);
+      border: 1px solid rgba(16, 185, 129, 0.45);
+      border-radius: 12px;
+      padding: 14px 16px;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: #6EE7B7;
+      text-align: center;
+    }
+
+    /* ── JOIN LINK ── */
+    .join-row {
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--border);
+    }
+
+    .join-label {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 0.68rem;
+      font-weight: 700;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--ink-2);
+      margin-bottom: 8px;
+    }
+
+    .join-link {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+
+    .join-link a {
+      font-size: 0.92rem;
+      color: var(--accent);
+      text-decoration: none;
+      font-weight: 600;
+      word-break: break-all;
+    }
+
+    .join-link a:hover { text-decoration: underline; }
+
+    .copy-mini {
+      background: transparent;
+      border: 1px solid var(--border);
+      color: var(--ink-2);
+      border-radius: 9999px;
+      padding: 6px 14px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.78rem;
+      font-weight: 600;
+      cursor: pointer;
+      flex-shrink: 0;
+    }
+
+    .copy-mini:hover { color: var(--ink); border-color: rgba(255, 108, 0, 0.4); }
+
+    /* ── WHAT YOU WALK AWAY WITH ── */
+    .walkaway { margin-bottom: 48px; }
+
+    .walkaway-grid { display: grid; gap: 12px; }
+
+    .walk-item {
+      display: flex;
+      gap: 14px;
+      align-items: flex-start;
+      background: var(--bg-alt);
+      border: 1px solid var(--border);
+      border-radius: 14px;
+      padding: 18px 20px;
+    }
+
+    .walk-item .n {
+      flex-shrink: 0;
+      font-family: 'Sora', system-ui, sans-serif;
+      font-size: 0.85rem;
+      font-weight: 800;
+      color: var(--accent);
+      background: rgba(255, 108, 0, 0.12);
+      border-radius: 9999px;
+      width: 28px;
+      height: 28px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 1px;
+    }
+
+    .walk-item p {
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--ink-2);
+    }
+
+    .walk-item strong { color: var(--ink); font-weight: 700; }
+
+    /* ── FAQ ── */
+    .faq { margin-bottom: 56px; }
+
+    .faq-item {
+      border-bottom: 1px solid var(--border);
+      padding: 16px 0;
+    }
+
+    .faq-item summary {
+      cursor: pointer;
+      font-family: 'Sora', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: 0.98rem;
+      color: var(--ink);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      gap: 12px;
+      list-style: none;
+    }
+
+    .faq-item summary::-webkit-details-marker { display: none; }
+
+    .faq-item summary::after {
+      content: '+';
+      color: var(--accent);
+      font-size: 1.3rem;
+      font-weight: 400;
+      flex-shrink: 0;
+    }
+
+    .faq-item[open] summary::after { content: '\2212'; }
+
+    .faq-item p {
+      margin-top: 10px;
+      font-size: 0.92rem;
+      color: var(--ink-2);
+      line-height: 1.65;
+    }
+
     @media (max-width: 600px) {
       .wrap {
         padding-inline: 16px;
       }
+
+      .cd-unit { padding: 10px 4px; }
+
+      .walk-item { padding: 16px; }
 
       header {
         padding: 12px 16px;
@@ -659,11 +846,10 @@
 <body>
 
   <!--
-    SESSION DATE lives in exactly three places in this file:
-      1. the .confirm-card "when" line below
-      2. step 01 body copy ("Block ...")
-      3. startUTC / endUTC in the script at the bottom
-    Change all three together, and keep them in step with the landing page (index.html), which carries the date twice.
+    SESSION DETAILS live in ONE place: the SESSION config in the first script
+    at the bottom of this file. The date and time strings you see on the page
+    are written from it at load, so change it there and the whole page follows.
+    Keep it in step with the landing page (index.html), which carries the date twice.
   -->
 
   <header>
@@ -690,19 +876,55 @@
         <p class="event">The Path to Paid Speaking Gigs</p>
         <div class="when">
           <span class="dot"></span>
-          <span class="when-text">September 30 · 4-5PM CET · 10-11AM ET · 7-8AM PT</span>
+          <span class="when-text" id="when-text">September 30 · 4-5PM CET · 10-11AM ET · 7-8AM PT</span>
         </div>
+
+        <div class="countdown" id="countdown">
+          <div class="cd-unit"><span class="cd-num" id="cd-days">0</span><span class="cd-label">Days</span></div>
+          <div class="cd-unit"><span class="cd-num" id="cd-hours">0</span><span class="cd-label">Hours</span></div>
+          <div class="cd-unit"><span class="cd-num" id="cd-mins">0</span><span class="cd-label">Minutes</span></div>
+        </div>
+
+        <div class="cd-live" id="cd-live" hidden></div>
 
         <div class="card-actions">
           <a class="btn" id="gcal-btn" href="#" target="_blank" rel="noopener">Add to Google Calendar</a>
           <a class="btn btn-ghost" id="ics-btn" href="#" download="path-to-paid-speaking-gigs-masterclass.ics">Download .ics</a>
         </div>
         <p class="card-note">Block it now, before life fills the slot. Set a reminder for 15 minutes before, so you show up focused and ready.</p>
+
+        <div class="join-row">
+          <p class="join-label">Your join link</p>
+          <div class="join-link">
+            <a id="join-link" href="#" target="_blank" rel="noopener"></a>
+            <button class="copy-mini" id="join-copy">Copy</button>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <div class="wrap">
+    <div class="walkaway">
+      <p class="section-label">So you know what you're walking into</p>
+      <p class="section-title">What you'll walk away with</p>
+
+      <div class="walkaway-grid">
+        <div class="walk-item">
+          <span class="n">1</span>
+          <p><strong>The real reason you're not getting booked.</strong> It is probably not your experience, your audience size or your connections. You'll see what actually decides it.</p>
+        </div>
+        <div class="walk-item">
+          <span class="n">2</span>
+          <p><strong>A repeatable way to start landing invitations.</strong> Where to look, who to approach, and the shift that makes you much easier to say yes to.</p>
+        </div>
+        <div class="walk-item">
+          <span class="n">3</span>
+          <p><strong>How it turns into money.</strong> How one conversation becomes more invitations, bigger rooms, and real speaking fees.</p>
+        </div>
+      </div>
+    </div>
+
     <div class="lto" id="lto">
       <p class="kicker">
         <span>Registrant price</span>
@@ -740,6 +962,8 @@
         <p class="price-note">One payment, lifetime access, in your inbox today.</p>
 
         <a class="btn" id="buy-btn" href="#">Yes, I want to arrive ready</a>
+
+        <p class="price-note" style="margin: 14px 0 0;">Instant access, yours to keep. Your seat on September 30 is safe either way.</p>
 
         <a class="lto-more" href="/confidence-to-speak/">See everything that is inside</a>
 
@@ -794,6 +1018,36 @@
           </div>
         </div>
       </div>
+    </div>
+
+    <div class="faq">
+      <p class="section-label">Just so you know</p>
+      <p class="section-title">Before September 30</p>
+
+      <details class="faq-item">
+        <summary>Will there be a replay?</summary>
+        <p>No. This one runs live only. Everything worth having happens in the room, including the questions, so block the hour properly rather than counting on catching up later.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>How long is it, really?</summary>
+        <p>Sixty minutes, and it starts on time. Stay to the end if you can, the last stretch is where it gets practical.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>What do I need to bring?</summary>
+        <p>Something to write with, and the expertise you already have. You don't need a polished pitch, a finished message, or a single stage under your belt.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>Do I need a big audience already?</summary>
+        <p>No. That is close to the opposite of the point. What gets you booked is not the size of your following, and that is exactly what the hour is about.</p>
+      </details>
+
+      <details class="faq-item">
+        <summary>I can't make it live, what now?</summary>
+        <p>Reply to your confirmation email and say so. Your seat is not wasted, but there is no substitute for being there, so move something if you possibly can.</p>
+      </details>
     </div>
   </div>
 
@@ -894,14 +1148,42 @@
   </script>
 
   <script>
+    /* ────────────────────────────────────────────────────────────────
+       SESSION CONFIG. The single source of truth for this page. The
+       date line, the countdown, the calendar buttons and the join link
+       are all written from it. Change it here and nowhere else.
+       ──────────────────────────────────────────────────────────────── */
+    var SESSION = {
+      startUTC: '20260930T140000Z',
+      endUTC:   '20260930T150000Z',
+      whenText: 'September 30 · 4-5PM CET · 10-11AM ET · 7-8AM PT',
+      title:    'The Path to Paid Speaking Gigs, Exclusive Live Training',
+      zoomLink: 'https://us06web.zoom.us/j/2106199726'
+    };
+
+    /* '20260930T140000Z' is not a format Date can parse, so expand it. */
+    SESSION.startMs = Date.UTC(
+      +SESSION.startUTC.slice(0, 4), +SESSION.startUTC.slice(4, 6) - 1, +SESSION.startUTC.slice(6, 8),
+      +SESSION.startUTC.slice(9, 11), +SESSION.startUTC.slice(11, 13), 0
+    );
+    SESSION.endMs = Date.UTC(
+      +SESSION.endUTC.slice(0, 4), +SESSION.endUTC.slice(4, 6) - 1, +SESSION.endUTC.slice(6, 8),
+      +SESSION.endUTC.slice(9, 11), +SESSION.endUTC.slice(11, 13), 0
+    );
+  </script>
+
+  <script>
     (function () {
       var gcalBtn = document.getElementById('gcal-btn');
       var icsBtn = document.getElementById('ics-btn');
 
-      var startUTC = '20260930T140000Z';
-      var endUTC = '20260930T150000Z';
-      var title = 'The Path to Paid Speaking Gigs, Exclusive Live Training';
-      var zoomLink = 'https://us06web.zoom.us/j/2106199726';
+      var startUTC = SESSION.startUTC;
+      var endUTC = SESSION.endUTC;
+      var title = SESSION.title;
+      var zoomLink = SESSION.zoomLink;
+
+      document.getElementById('when-text').textContent = SESSION.whenText;
+
       var detailLines = [
         'YOUR ZOOM LINK FOR THIS EPIC EXPERIENCE:',
         zoomLink
@@ -931,6 +1213,64 @@
         'END:VCALENDAR'
       ].join('\r\n');
       icsBtn.href = 'data:text/calendar;charset=utf8,' + encodeURIComponent(ics);
+    })();
+
+    /* Countdown to the session, and the live / finished states after it. */
+    (function () {
+      var cd      = document.getElementById('countdown');
+      var live    = document.getElementById('cd-live');
+      var elDays  = document.getElementById('cd-days');
+      var elHours = document.getElementById('cd-hours');
+      var elMins  = document.getElementById('cd-mins');
+
+      function tick() {
+        var now = Date.now();
+
+        if (now >= SESSION.endMs) {
+          cd.hidden = true;
+          live.hidden = false;
+          live.textContent = 'This session has finished. Check your inbox for what comes next.';
+          return;
+        }
+
+        if (now >= SESSION.startMs) {
+          cd.hidden = true;
+          live.hidden = false;
+          live.innerHTML = 'We are live right now. <a href="' + SESSION.zoomLink +
+            '" target="_blank" rel="noopener" style="color:#6EE7B7;font-weight:700;">Join the room &rarr;</a>';
+          setTimeout(tick, 30000);
+          return;
+        }
+
+        var left = SESSION.startMs - now;
+        var mins = Math.floor(left / 60000);
+        elDays.textContent  = Math.floor(mins / 1440);
+        elHours.textContent = Math.floor(mins % 1440 / 60);
+        elMins.textContent  = mins % 60;
+
+        setTimeout(tick, 1000);
+      }
+
+      tick();
+    })();
+
+    /* The join link, so anyone who loses the calendar entry can find it here. */
+    (function () {
+      var link = document.getElementById('join-link');
+      var copy = document.getElementById('join-copy');
+      if (!link) return;
+
+      link.href = SESSION.zoomLink;
+      link.textContent = SESSION.zoomLink.replace(/^https:\/\//, '');
+
+      if (copy) {
+        copy.addEventListener('click', function () {
+          navigator.clipboard.writeText(SESSION.zoomLink).then(function () {
+            copy.textContent = 'Copied';
+            setTimeout(function () { copy.textContent = 'Copy'; }, 2000);
+          });
+        });
+      }
     })();
 
     (function () {
